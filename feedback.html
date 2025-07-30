@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="fonts/fonts.css">
+   <link rel="stylesheet" href="css/header.min.css">
+   <link rel="stylesheet" href="css/style-feedback.min.css">
+   <link rel="stylesheet" href="css/footer.min.css">
+   <title>Витаминия</title>
+</head>
+
+<body>
+   <div class="overlay"></div>
+   <div class="call-request">
+      <div class="call-request__inner">
+         <div class="call-request__cross"></div>
+         <div class="call-request__title">заказать <br> обрытный звонок</div>
+         <form action="/call-request" method="post" class="call-request__form">
+            <input placeholder="Имя" type="text" class="call-request__input call-request__input-name input" required>
+            <input placeholder="Телефон" type="tel" class="call-request__input call-request__input-tel input" required>
+            <input placeholder="Сообщение" type="text" class="call-request__input call-request__input-message input"
+               required>
+            <select name="call-request__input-question" required>
+               <option value="">Ваш вопрос</option>
+               <option value="first-question">1-й вопрос</option>
+               <option value="second-question">2-й вопрос</option>
+               <option value="third-question">3-й вопрос</option>
+            </select>
+            <label class="call-request__time">
+               Удобное время звонка сегодня
+               <div class="call-request__time-inner">
+                  <input class="input" type="time" name="callback_time" required>
+               </div>
+            </label>
+            <button class="button call-request__button">
+               <div>Перезвоните мне</div>
+               <img src="img/button-arrow-right-white.svg" alt="decor">
+            </button>
+         </form>
+         <div class="call-request__privacy">Нажимая эту кнопку, Вы даете согласие на <a href="agree.html">обработку персональных
+               данных</a></div>
+      </div>
+   </div>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header-top__wrapper">
+            <div class="container">
+               <div class="header-top">
+                  <nav class="header-top__nav">
+                     <ul class="header-top__nav-list">
+                        <li class="header-top__nav-item">
+                           <a href="about.html" class="header-top__nav-link">О компании</a>
+                        </li>
+                        <li class="header-top__nav-item">
+                           <a href="news.html" class="header-top__nav-link">Статьи и новости</a>
+                        </li>
+                        <li class="header-top__nav-item">
+                           <a href="feedback.html" class="header-top__nav-link">Отзывы о товарах</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="header-top__phone-wrapper">
+                     <div class="header-top__phone-inner">
+                        <div class="header-top__phone-text">Заказать звонок</div>
+                        <img class="header-top__phone-svg" src="img/phone-icon.svg" alt="phone-icon">
+                     </div>
+                     <a href="tel:+74959216121" class="header-top__phone-number">+7 (495) 921-61-21</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-main">
+            <div class="container">
+               <div class="header-main__inner">
+                  <div class="header-main__logo">
+                     <img src="img/logo.png" alt="logo">
+                  </div>
+                  <div class="header-main__phone">
+                     <div class="header-main__phone-icon">
+                        <img src="img/phone-icon.svg" alt="svg">
+                     </div>
+                     <a href="tel:+74959216121" class="header-main__phone-number">+7 (495) 921-61-21</a>
+                  </div>
+                  <div class="header-main__search">
+                     <input placeholder="Поиск по каталогу" type="text" class="header-main__searchbar">
+                     <div class="header-main__search-svg">
+                        <img src="img/search-green.svg" alt="svg">
+                     </div>
+                  </div>
+                  <div class="header-main__links">
+                     <a href="confirm.html" class="header-main__link header-main__link-cart">
+                        <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
+                           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <path id="Vector"
+                              d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z"
+                              fill="#7C7C7C" fill-opacity="1.000000" fill-rule="nonzero" />
+                        </svg>
+                        <div class="cart-number">8</div>
+                     </a>
+                     <a href="#" class="header-main__link header-main__link-fav">
+                        <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
+                           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <path id="Vector"
+                              d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
+                              stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000"
+                              stroke-linejoin="round" />
+                        </svg>
+                     </a>
+                     <a href="me.html" class="header-main__link header-main__link-acc">
+                        <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
+                           xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                           <path id="Vector"
+                              d="M28.73 29.83C29.01 29.55 29.16 29.18 29.16 28.8L29.16 26.98C29.17 22.89 23.37 19.68 17.5 19.68C11.62 19.68 5.83 22.89 5.83 26.98L5.83 28.8C5.83 29.18 5.98 29.55 6.26 29.83C6.53 30.1 6.9 30.26 7.29 30.26L27.7 30.26C28.09 30.26 28.46 30.1 28.73 29.83ZM22.35 12C22.09 12.64 21.7 13.22 21.21 13.71C20.72 14.2 20.14 14.58 19.51 14.85C18.87 15.11 18.19 15.25 17.5 15.25C16.81 15.25 16.12 15.11 15.48 14.85C14.85 14.58 14.27 14.2 13.78 13.71C13.29 13.22 12.9 12.64 12.64 12C12.38 11.36 12.24 10.68 12.24 9.99C12.24 8.6 12.79 7.26 13.78 6.27C14.76 5.29 16.1 4.73 17.5 4.73C18.89 4.73 20.23 5.29 21.21 6.27C22.2 7.26 22.75 8.6 22.75 9.99C22.75 10.68 22.62 11.36 22.35 12Z"
+                              stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000"
+                              stroke-linejoin="round" />
+                        </svg>
+                     </a>
+                  </div>
+                  <button class="header-main__catalog">
+                     <div class="header-main__catalog-img">
+                        <img src="img/catalog-search.svg" alt="svg">
+                     </div>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="header-bot">
+            <div class="container">
+               <div class="header-bot__inner">
+                  <ul class="header-bot__list">
+                     <li class="header-bot__item">
+                        <a href="catalog.html" class="header-bot__link header-bot__link-catalog">
+                           <div class="catalog-arrow">
+                              <img src="img/arrow-botright-orange.svg" alt="svg">
+                           </div>
+                           <div class="catalog-text">Каталог</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="catalog.html" class="header-bot__link">
+                           <div class="catalog-text">Витамины</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="catalog.html" class="header-bot__link">
+                           <div class="catalog-text">БАДы</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="catalog.html" class="header-bot__link">
+                           <div class="catalog-text">Спортивное питание</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="best.html" class="header-bot__link">
+                           <div class="catalog-text">Бестселлеры</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="#" class="header-bot__link">
+                           <div class="catalog-text">Симптоматика</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="sales.html" class="header-bot__link">
+                           <div class="catalog-text">Акции и скидки</div>
+                        </a>
+                     </li>
+                     <li class="header-bot__item">
+                        <a href="delivery.html" class="header-bot__link">
+                           <div class="catalog-text">Доставка и оплата</div>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="main main-block">
+         <div class="container">
+            <div class="location">
+               <a href="index.html" class="location-main">Главная</a>
+               <div class="location-slesh">/</div>
+               <a href="feedback.html" class="location-current">Отзывы о товарах</a>
+            </div>
+            <h2 class="main-title">Отзывы о товарах</h2>
+            <div class="main-content">
+               <div class="main-content__top">
+                  <button class="filter">
+                     <div class="filter-decor">
+                        <img src="img/filter.svg" alt="svg">
+                     </div>
+                     <div class="filter-text">Самые популярные</div>
+                     <div class="filter-arrow">
+                        <img src="img/filter-arrow-down-green.svg" alt="svg">
+                     </div>
+                  </button>
+                  <button class="category">
+                     <div class="category-decor">
+                        <img src="img/filter-category.svg" alt="svg">
+                     </div>
+                     <div class="category-text">Фильтр по категории</div>
+                     <div class="category-arrow">
+                        <img src="img/filter-arrow-down-green.svg" alt="svg">
+                     </div>
+                  </button>
+               </div>
+               <div class="main-content__items">
+                  <div class="main-content__item">
+                     <div class="main-content__item-content">
+                        <div class="item-title">Ренат</div>
+                        <div class="item-mid">
+                           <div class="item-mid__comment">
+                              <div class="item-mid__comment-title">Отзыв о BioExpert, «Экстракт ацеролы DreamWell» , жидкость, 30 мл</div>
+                              <div class="item-mid__comment-text">Lorem ipsum dolor sit amet, consectetur
+                                 adipiscing elit. Aliquam lectus risus, finibus ornare vestibulum et, feugiat quis
+                                 dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur maximus est sed
+                                 porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                 tristique nibh, mollis vehicula lectus tortor eu purus. Donec ut tortor blandit,
+                                 sagittis diam eget, suscipit eros.</div>
+                           </div>
+                           <div class="item-mid__grade">
+                              <div class="item-mid__grade-stars">
+                                 <img src="img/stars-solid.svg" alt="stars">
+                              </div>
+                           </div>
+                           <div class="item-mid__date">
+                              <div class="item-mid__date-date">15 мая 2025</div>
+                           </div>
+                        </div>
+                        <div class="item-photos">
+                           <div class="item-photos__inner">
+                              <div class="item-photo">
+                                 <img src="img/me-comment.png" alt="фото товара">
+                              </div>
+                              <div class="item-photo">
+                                 <img src="img/me-comment.png" alt="фото товара">
+                              </div>
+                              <div class="item-photo">
+                                 <img src="img/me-comment.png" alt="фото товара">
+                              </div>
+                              <div class="item-photo__add"></div>
+                           </div>
+                        </div>
+                        <div class="item-thumb">
+                           <div class="item-thumb__thumb-up">
+                              <svg width="20.312500" height="22.395508" viewBox="0 0 20.3125 22.3955" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector"
+                                    d="M0.78 9.35L1.55 9.29C1.54 9.09 1.44 8.9 1.29 8.77C1.14 8.64 0.94 8.57 0.74 8.58C0.54 8.58 0.35 8.67 0.21 8.81C0.07 8.96 0 9.15 0 9.35L0.78 9.35ZM18.73 11.25L18 15.5L19.53 15.77L20.27 11.52L18.73 11.25ZM11.45 20.83L6.6 20.83L6.6 22.39L11.45 22.39L11.45 20.83ZM5.66 19.96L4.81 10.17L3.25 10.31L4.1 20.09L5.66 19.96ZM18 15.5C17.47 18.55 14.71 20.83 11.45 20.83L11.45 22.39C15.43 22.39 18.87 19.61 19.53 15.77L18 15.5ZM11.46 4L10.77 8.22L12.31 8.47L13 4.26L11.46 4ZM5.14 9.37L6.64 8.07L5.62 6.89L4.12 8.18L5.14 9.37ZM9.36 3.87L9.86 1.96L8.35 1.57L7.85 3.48L9.36 3.87ZM10.61 1.59L10.76 1.64L11.24 0.15L11.08 0.1L10.61 1.59ZM8.61 5.79C8.94 5.18 9.19 4.54 9.36 3.87L7.85 3.48C7.71 4.03 7.5 4.56 7.23 5.06L8.61 5.79ZM10.76 1.64C10.91 1.68 11.04 1.76 11.15 1.87C11.26 1.99 11.34 2.12 11.38 2.27L12.89 1.88C12.78 1.47 12.58 1.1 12.29 0.8C12 0.5 11.64 0.27 11.24 0.15L10.76 1.64ZM9.86 1.96C9.88 1.89 9.92 1.82 9.97 1.76C10.02 1.7 10.08 1.65 10.15 1.62L9.47 0.21C8.92 0.48 8.5 0.97 8.35 1.57L9.86 1.96ZM10.15 1.62C10.3 1.55 10.46 1.54 10.61 1.59L11.08 0.1C10.55 -0.07 9.98 -0.03 9.47 0.21L10.15 1.62ZM12.39 10.13L17.79 10.13L17.79 8.57L12.39 8.57L12.39 10.13ZM2.57 20.99L1.55 9.29L0 9.42L1.01 21.12L2.57 20.99ZM1.56 21.1L1.56 9.35L0 9.35L0 21.1L1.56 21.1ZM1.01 21.12C1.01 21.09 1.01 21.05 1.02 21.01C1.03 20.98 1.05 20.94 1.08 20.92C1.11 20.89 1.14 20.87 1.17 20.85C1.21 20.84 1.25 20.83 1.28 20.83L1.28 22.39C2.04 22.39 2.63 21.74 2.57 20.99L1.01 21.12ZM13 4.26C13.13 3.47 13.09 2.66 12.89 1.88L11.38 2.27C11.53 2.84 11.55 3.43 11.46 4L13 4.26ZM6.6 20.83C6.37 20.83 6.14 20.74 5.96 20.58C5.78 20.41 5.68 20.19 5.66 19.96L4.1 20.09C4.16 20.72 4.44 21.3 4.91 21.73C5.37 22.15 5.98 22.39 6.6 22.39L6.6 20.83ZM6.64 8.07C7.35 7.46 8.11 6.74 8.61 5.79L7.23 5.06C6.87 5.73 6.3 6.3 5.62 6.89L6.64 8.07ZM20.27 11.52C20.33 11.16 20.32 10.79 20.22 10.43C20.12 10.08 19.95 9.75 19.72 9.47C19.48 9.19 19.19 8.96 18.85 8.81C18.52 8.65 18.16 8.57 17.79 8.57L17.79 10.13C18.38 10.13 18.83 10.67 18.73 11.25L20.27 11.52ZM1.28 20.83C1.44 20.83 1.56 20.95 1.56 21.1L0 21.1C0 21.81 0.57 22.39 1.28 22.39L1.28 20.83ZM10.77 8.22C10.73 8.45 10.74 8.7 10.81 8.93C10.87 9.16 10.98 9.37 11.14 9.55C11.29 9.74 11.49 9.88 11.7 9.98C11.92 10.08 12.16 10.13 12.39 10.13L12.39 8.57C12.38 8.57 12.37 8.57 12.36 8.56C12.35 8.56 12.33 8.55 12.33 8.54C12.32 8.53 12.32 8.52 12.31 8.51C12.31 8.5 12.31 8.48 12.31 8.47L10.77 8.22ZM4.81 10.17C4.8 10.02 4.82 9.87 4.88 9.73C4.94 9.59 5.02 9.46 5.14 9.37L4.12 8.18C3.82 8.44 3.58 8.77 3.43 9.14C3.28 9.51 3.22 9.91 3.25 10.31L4.81 10.17Z"
+                                    fill="#1C9466" fill-opacity="1.000000" fill-rule="nonzero" />
+                              </svg>
+                           </div>
+                           <div class="item-thumb__thumb-down">
+                              <svg width="20.312500" height="22.395508" viewBox="0 0 20.3125 22.3955" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector"
+                                    d="M0.78 9.35L1.55 9.29C1.54 9.09 1.44 8.9 1.29 8.77C1.14 8.64 0.94 8.57 0.74 8.58C0.54 8.58 0.35 8.67 0.21 8.81C0.07 8.96 0 9.15 0 9.35L0.78 9.35ZM18.73 11.25L18 15.5L19.53 15.77L20.27 11.52L18.73 11.25ZM11.45 20.83L6.6 20.83L6.6 22.39L11.45 22.39L11.45 20.83ZM5.66 19.96L4.81 10.17L3.25 10.31L4.1 20.09L5.66 19.96ZM18 15.5C17.47 18.55 14.71 20.83 11.45 20.83L11.45 22.39C15.43 22.39 18.87 19.61 19.53 15.77L18 15.5ZM11.46 4L10.77 8.22L12.31 8.47L13 4.26L11.46 4ZM5.14 9.37L6.64 8.07L5.62 6.89L4.12 8.18L5.14 9.37ZM9.36 3.87L9.86 1.96L8.35 1.57L7.85 3.48L9.36 3.87ZM10.61 1.59L10.76 1.64L11.24 0.15L11.08 0.1L10.61 1.59ZM8.61 5.79C8.94 5.18 9.19 4.54 9.36 3.87L7.85 3.48C7.71 4.03 7.5 4.56 7.23 5.06L8.61 5.79ZM10.76 1.64C10.91 1.68 11.04 1.76 11.15 1.87C11.26 1.99 11.34 2.12 11.38 2.27L12.89 1.88C12.78 1.47 12.58 1.1 12.29 0.8C12 0.5 11.64 0.27 11.24 0.15L10.76 1.64ZM9.86 1.96C9.88 1.89 9.92 1.82 9.97 1.76C10.02 1.7 10.08 1.65 10.15 1.62L9.47 0.21C8.92 0.48 8.5 0.97 8.35 1.57L9.86 1.96ZM10.15 1.62C10.3 1.55 10.46 1.54 10.61 1.59L11.08 0.1C10.55 -0.07 9.98 -0.03 9.47 0.21L10.15 1.62ZM12.39 10.13L17.79 10.13L17.79 8.57L12.39 8.57L12.39 10.13ZM2.57 20.99L1.55 9.29L0 9.42L1.01 21.12L2.57 20.99ZM1.56 21.1L1.56 9.35L0 9.35L0 21.1L1.56 21.1ZM1.01 21.12C1.01 21.09 1.01 21.05 1.02 21.01C1.03 20.98 1.05 20.94 1.08 20.92C1.11 20.89 1.14 20.87 1.17 20.85C1.21 20.84 1.25 20.83 1.28 20.83L1.28 22.39C2.04 22.39 2.63 21.74 2.57 20.99L1.01 21.12ZM13 4.26C13.13 3.47 13.09 2.66 12.89 1.88L11.38 2.27C11.53 2.84 11.55 3.43 11.46 4L13 4.26ZM6.6 20.83C6.37 20.83 6.14 20.74 5.96 20.58C5.78 20.41 5.68 20.19 5.66 19.96L4.1 20.09C4.16 20.72 4.44 21.3 4.91 21.73C5.37 22.15 5.98 22.39 6.6 22.39L6.6 20.83ZM6.64 8.07C7.35 7.46 8.11 6.74 8.61 5.79L7.23 5.06C6.87 5.73 6.3 6.3 5.62 6.89L6.64 8.07ZM20.27 11.52C20.33 11.16 20.32 10.79 20.22 10.43C20.12 10.08 19.95 9.75 19.72 9.47C19.48 9.19 19.19 8.96 18.85 8.81C18.52 8.65 18.16 8.57 17.79 8.57L17.79 10.13C18.38 10.13 18.83 10.67 18.73 11.25L20.27 11.52ZM1.28 20.83C1.44 20.83 1.56 20.95 1.56 21.1L0 21.1C0 21.81 0.57 22.39 1.28 22.39L1.28 20.83ZM10.77 8.22C10.73 8.45 10.74 8.7 10.81 8.93C10.87 9.16 10.98 9.37 11.14 9.55C11.29 9.74 11.49 9.88 11.7 9.98C11.92 10.08 12.16 10.13 12.39 10.13L12.39 8.57C12.38 8.57 12.37 8.57 12.36 8.56C12.35 8.56 12.33 8.55 12.33 8.54C12.32 8.53 12.32 8.52 12.31 8.51C12.31 8.5 12.31 8.48 12.31 8.47L10.77 8.22ZM4.81 10.17C4.8 10.02 4.82 9.87 4.88 9.73C4.94 9.59 5.02 9.46 5.14 9.37L4.12 8.18C3.82 8.44 3.58 8.77 3.43 9.14C3.28 9.51 3.22 9.91 3.25 10.31L4.81 10.17Z"
+                                    fill="#1C9466" fill-opacity="1.000000" fill-rule="nonzero" />
+                              </svg>
+                           </div>
+                           <div class="item-thumb__text">Рекомендую к покупке!</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-content__item">
+                     <div class="main-content__item-content">
+                        <div class="item-title">Ольга Р.</div>
+                        <div class="item-mid">
+                           <div class="item-mid__comment">
+                              <div class="item-mid__comment-title">Отзыв о Supermins, Витамин C (аскорбат натрия), капсулы, 30 шт.</div>
+                              <div class="item-mid__comment-text">Lorem ipsum dolor sit amet, consectetur
+                                 adipiscing elit. Aliquam lectus risus, finibus ornare vestibulum et, feugiat quis
+                                 dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur maximus est sed
+                                 porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                 tristique nibh, mollis vehicula lectus tortor eu purus. Donec ut tortor blandit,
+                                 sagittis diam eget, suscipit eros.</div>
+                           </div>
+                           <div class="item-mid__grade">
+                              <div class="item-mid__grade-stars">
+                                 <img src="img/stars-solid.svg" alt="stars">
+                              </div>
+                           </div>
+                           <div class="item-mid__date">
+                              <div class="item-mid__date-date">15 мая 2025</div>
+                           </div>
+                        </div>
+                        <div class="item-photos">
+                           <div class="item-photos__inner">
+                              <div class="item-photo">
+                                 <img src="img/me-comment.png" alt="фото товара">
+                              </div>
+                              <div class="item-photo">
+                                 <img src="img/me-comment.png" alt="фото товара">
+                              </div>
+                              <div class="item-photo">
+                                 <img src="img/me-comment.png" alt="фото товара">
+                              </div>
+                              <div class="item-photo__add"></div>
+                           </div>
+                        </div>
+                        <div class="item-thumb">
+                           <div class="item-thumb__thumb-up">
+                              <svg width="20.312500" height="22.395508" viewBox="0 0 20.3125 22.3955" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector"
+                                    d="M0.78 9.35L1.55 9.29C1.54 9.09 1.44 8.9 1.29 8.77C1.14 8.64 0.94 8.57 0.74 8.58C0.54 8.58 0.35 8.67 0.21 8.81C0.07 8.96 0 9.15 0 9.35L0.78 9.35ZM18.73 11.25L18 15.5L19.53 15.77L20.27 11.52L18.73 11.25ZM11.45 20.83L6.6 20.83L6.6 22.39L11.45 22.39L11.45 20.83ZM5.66 19.96L4.81 10.17L3.25 10.31L4.1 20.09L5.66 19.96ZM18 15.5C17.47 18.55 14.71 20.83 11.45 20.83L11.45 22.39C15.43 22.39 18.87 19.61 19.53 15.77L18 15.5ZM11.46 4L10.77 8.22L12.31 8.47L13 4.26L11.46 4ZM5.14 9.37L6.64 8.07L5.62 6.89L4.12 8.18L5.14 9.37ZM9.36 3.87L9.86 1.96L8.35 1.57L7.85 3.48L9.36 3.87ZM10.61 1.59L10.76 1.64L11.24 0.15L11.08 0.1L10.61 1.59ZM8.61 5.79C8.94 5.18 9.19 4.54 9.36 3.87L7.85 3.48C7.71 4.03 7.5 4.56 7.23 5.06L8.61 5.79ZM10.76 1.64C10.91 1.68 11.04 1.76 11.15 1.87C11.26 1.99 11.34 2.12 11.38 2.27L12.89 1.88C12.78 1.47 12.58 1.1 12.29 0.8C12 0.5 11.64 0.27 11.24 0.15L10.76 1.64ZM9.86 1.96C9.88 1.89 9.92 1.82 9.97 1.76C10.02 1.7 10.08 1.65 10.15 1.62L9.47 0.21C8.92 0.48 8.5 0.97 8.35 1.57L9.86 1.96ZM10.15 1.62C10.3 1.55 10.46 1.54 10.61 1.59L11.08 0.1C10.55 -0.07 9.98 -0.03 9.47 0.21L10.15 1.62ZM12.39 10.13L17.79 10.13L17.79 8.57L12.39 8.57L12.39 10.13ZM2.57 20.99L1.55 9.29L0 9.42L1.01 21.12L2.57 20.99ZM1.56 21.1L1.56 9.35L0 9.35L0 21.1L1.56 21.1ZM1.01 21.12C1.01 21.09 1.01 21.05 1.02 21.01C1.03 20.98 1.05 20.94 1.08 20.92C1.11 20.89 1.14 20.87 1.17 20.85C1.21 20.84 1.25 20.83 1.28 20.83L1.28 22.39C2.04 22.39 2.63 21.74 2.57 20.99L1.01 21.12ZM13 4.26C13.13 3.47 13.09 2.66 12.89 1.88L11.38 2.27C11.53 2.84 11.55 3.43 11.46 4L13 4.26ZM6.6 20.83C6.37 20.83 6.14 20.74 5.96 20.58C5.78 20.41 5.68 20.19 5.66 19.96L4.1 20.09C4.16 20.72 4.44 21.3 4.91 21.73C5.37 22.15 5.98 22.39 6.6 22.39L6.6 20.83ZM6.64 8.07C7.35 7.46 8.11 6.74 8.61 5.79L7.23 5.06C6.87 5.73 6.3 6.3 5.62 6.89L6.64 8.07ZM20.27 11.52C20.33 11.16 20.32 10.79 20.22 10.43C20.12 10.08 19.95 9.75 19.72 9.47C19.48 9.19 19.19 8.96 18.85 8.81C18.52 8.65 18.16 8.57 17.79 8.57L17.79 10.13C18.38 10.13 18.83 10.67 18.73 11.25L20.27 11.52ZM1.28 20.83C1.44 20.83 1.56 20.95 1.56 21.1L0 21.1C0 21.81 0.57 22.39 1.28 22.39L1.28 20.83ZM10.77 8.22C10.73 8.45 10.74 8.7 10.81 8.93C10.87 9.16 10.98 9.37 11.14 9.55C11.29 9.74 11.49 9.88 11.7 9.98C11.92 10.08 12.16 10.13 12.39 10.13L12.39 8.57C12.38 8.57 12.37 8.57 12.36 8.56C12.35 8.56 12.33 8.55 12.33 8.54C12.32 8.53 12.32 8.52 12.31 8.51C12.31 8.5 12.31 8.48 12.31 8.47L10.77 8.22ZM4.81 10.17C4.8 10.02 4.82 9.87 4.88 9.73C4.94 9.59 5.02 9.46 5.14 9.37L4.12 8.18C3.82 8.44 3.58 8.77 3.43 9.14C3.28 9.51 3.22 9.91 3.25 10.31L4.81 10.17Z"
+                                    fill="#1C9466" fill-opacity="1.000000" fill-rule="nonzero" />
+                              </svg>
+                           </div>
+                           <div class="item-thumb__thumb-down">
+                              <svg width="20.312500" height="22.395508" viewBox="0 0 20.3125 22.3955" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector"
+                                    d="M0.78 9.35L1.55 9.29C1.54 9.09 1.44 8.9 1.29 8.77C1.14 8.64 0.94 8.57 0.74 8.58C0.54 8.58 0.35 8.67 0.21 8.81C0.07 8.96 0 9.15 0 9.35L0.78 9.35ZM18.73 11.25L18 15.5L19.53 15.77L20.27 11.52L18.73 11.25ZM11.45 20.83L6.6 20.83L6.6 22.39L11.45 22.39L11.45 20.83ZM5.66 19.96L4.81 10.17L3.25 10.31L4.1 20.09L5.66 19.96ZM18 15.5C17.47 18.55 14.71 20.83 11.45 20.83L11.45 22.39C15.43 22.39 18.87 19.61 19.53 15.77L18 15.5ZM11.46 4L10.77 8.22L12.31 8.47L13 4.26L11.46 4ZM5.14 9.37L6.64 8.07L5.62 6.89L4.12 8.18L5.14 9.37ZM9.36 3.87L9.86 1.96L8.35 1.57L7.85 3.48L9.36 3.87ZM10.61 1.59L10.76 1.64L11.24 0.15L11.08 0.1L10.61 1.59ZM8.61 5.79C8.94 5.18 9.19 4.54 9.36 3.87L7.85 3.48C7.71 4.03 7.5 4.56 7.23 5.06L8.61 5.79ZM10.76 1.64C10.91 1.68 11.04 1.76 11.15 1.87C11.26 1.99 11.34 2.12 11.38 2.27L12.89 1.88C12.78 1.47 12.58 1.1 12.29 0.8C12 0.5 11.64 0.27 11.24 0.15L10.76 1.64ZM9.86 1.96C9.88 1.89 9.92 1.82 9.97 1.76C10.02 1.7 10.08 1.65 10.15 1.62L9.47 0.21C8.92 0.48 8.5 0.97 8.35 1.57L9.86 1.96ZM10.15 1.62C10.3 1.55 10.46 1.54 10.61 1.59L11.08 0.1C10.55 -0.07 9.98 -0.03 9.47 0.21L10.15 1.62ZM12.39 10.13L17.79 10.13L17.79 8.57L12.39 8.57L12.39 10.13ZM2.57 20.99L1.55 9.29L0 9.42L1.01 21.12L2.57 20.99ZM1.56 21.1L1.56 9.35L0 9.35L0 21.1L1.56 21.1ZM1.01 21.12C1.01 21.09 1.01 21.05 1.02 21.01C1.03 20.98 1.05 20.94 1.08 20.92C1.11 20.89 1.14 20.87 1.17 20.85C1.21 20.84 1.25 20.83 1.28 20.83L1.28 22.39C2.04 22.39 2.63 21.74 2.57 20.99L1.01 21.12ZM13 4.26C13.13 3.47 13.09 2.66 12.89 1.88L11.38 2.27C11.53 2.84 11.55 3.43 11.46 4L13 4.26ZM6.6 20.83C6.37 20.83 6.14 20.74 5.96 20.58C5.78 20.41 5.68 20.19 5.66 19.96L4.1 20.09C4.16 20.72 4.44 21.3 4.91 21.73C5.37 22.15 5.98 22.39 6.6 22.39L6.6 20.83ZM6.64 8.07C7.35 7.46 8.11 6.74 8.61 5.79L7.23 5.06C6.87 5.73 6.3 6.3 5.62 6.89L6.64 8.07ZM20.27 11.52C20.33 11.16 20.32 10.79 20.22 10.43C20.12 10.08 19.95 9.75 19.72 9.47C19.48 9.19 19.19 8.96 18.85 8.81C18.52 8.65 18.16 8.57 17.79 8.57L17.79 10.13C18.38 10.13 18.83 10.67 18.73 11.25L20.27 11.52ZM1.28 20.83C1.44 20.83 1.56 20.95 1.56 21.1L0 21.1C0 21.81 0.57 22.39 1.28 22.39L1.28 20.83ZM10.77 8.22C10.73 8.45 10.74 8.7 10.81 8.93C10.87 9.16 10.98 9.37 11.14 9.55C11.29 9.74 11.49 9.88 11.7 9.98C11.92 10.08 12.16 10.13 12.39 10.13L12.39 8.57C12.38 8.57 12.37 8.57 12.36 8.56C12.35 8.56 12.33 8.55 12.33 8.54C12.32 8.53 12.32 8.52 12.31 8.51C12.31 8.5 12.31 8.48 12.31 8.47L10.77 8.22ZM4.81 10.17C4.8 10.02 4.82 9.87 4.88 9.73C4.94 9.59 5.02 9.46 5.14 9.37L4.12 8.18C3.82 8.44 3.58 8.77 3.43 9.14C3.28 9.51 3.22 9.91 3.25 10.31L4.81 10.17Z"
+                                    fill="#1C9466" fill-opacity="1.000000" fill-rule="nonzero" />
+                              </svg>
+                           </div>
+                           <div class="item-thumb__text">Рекомендую к покупке!</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-content__item">
+                     <div class="main-content__item-content">
+                        <div class="item-title">Наталья П.</div>
+                        <div class="item-mid">
+                           <div class="item-mid__comment">
+                              <div class="item-mid__comment-title">Отзыв о Supermins, Экоферрин (комплекс микроэлементов), жидкость, 30 мл</div>
+                              <div class="item-mid__comment-text">Lorem ipsum dolor sit amet, consectetur
+                                 adipiscing elit. Aliquam lectus risus, finibus ornare vestibulum et, feugiat quis
+                                 dui. Vivamus sit amet dolor et magna facilisis rhoncus. Curabitur maximus est sed
+                                 porta scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+                                 tristique nibh, mollis vehicula lectus tortor eu purus. Donec ut tortor blandit,
+                                 sagittis diam eget, suscipit eros.</div>
+                           </div>
+                           <div class="item-mid__grade">
+                              <div class="item-mid__grade-stars">
+                                 <img src="img/stars-solid.svg" alt="stars">
+                              </div>
+                           </div>
+                           <div class="item-mid__date">
+                              <div class="item-mid__date-date">15 мая 2025</div>
+                           </div>
+                        </div>
+                        <div class="item-thumb">
+                           <div class="item-thumb__thumb-up">
+                              <svg width="20.312500" height="22.395508" viewBox="0 0 20.3125 22.3955" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector"
+                                    d="M0.78 9.35L1.55 9.29C1.54 9.09 1.44 8.9 1.29 8.77C1.14 8.64 0.94 8.57 0.74 8.58C0.54 8.58 0.35 8.67 0.21 8.81C0.07 8.96 0 9.15 0 9.35L0.78 9.35ZM18.73 11.25L18 15.5L19.53 15.77L20.27 11.52L18.73 11.25ZM11.45 20.83L6.6 20.83L6.6 22.39L11.45 22.39L11.45 20.83ZM5.66 19.96L4.81 10.17L3.25 10.31L4.1 20.09L5.66 19.96ZM18 15.5C17.47 18.55 14.71 20.83 11.45 20.83L11.45 22.39C15.43 22.39 18.87 19.61 19.53 15.77L18 15.5ZM11.46 4L10.77 8.22L12.31 8.47L13 4.26L11.46 4ZM5.14 9.37L6.64 8.07L5.62 6.89L4.12 8.18L5.14 9.37ZM9.36 3.87L9.86 1.96L8.35 1.57L7.85 3.48L9.36 3.87ZM10.61 1.59L10.76 1.64L11.24 0.15L11.08 0.1L10.61 1.59ZM8.61 5.79C8.94 5.18 9.19 4.54 9.36 3.87L7.85 3.48C7.71 4.03 7.5 4.56 7.23 5.06L8.61 5.79ZM10.76 1.64C10.91 1.68 11.04 1.76 11.15 1.87C11.26 1.99 11.34 2.12 11.38 2.27L12.89 1.88C12.78 1.47 12.58 1.1 12.29 0.8C12 0.5 11.64 0.27 11.24 0.15L10.76 1.64ZM9.86 1.96C9.88 1.89 9.92 1.82 9.97 1.76C10.02 1.7 10.08 1.65 10.15 1.62L9.47 0.21C8.92 0.48 8.5 0.97 8.35 1.57L9.86 1.96ZM10.15 1.62C10.3 1.55 10.46 1.54 10.61 1.59L11.08 0.1C10.55 -0.07 9.98 -0.03 9.47 0.21L10.15 1.62ZM12.39 10.13L17.79 10.13L17.79 8.57L12.39 8.57L12.39 10.13ZM2.57 20.99L1.55 9.29L0 9.42L1.01 21.12L2.57 20.99ZM1.56 21.1L1.56 9.35L0 9.35L0 21.1L1.56 21.1ZM1.01 21.12C1.01 21.09 1.01 21.05 1.02 21.01C1.03 20.98 1.05 20.94 1.08 20.92C1.11 20.89 1.14 20.87 1.17 20.85C1.21 20.84 1.25 20.83 1.28 20.83L1.28 22.39C2.04 22.39 2.63 21.74 2.57 20.99L1.01 21.12ZM13 4.26C13.13 3.47 13.09 2.66 12.89 1.88L11.38 2.27C11.53 2.84 11.55 3.43 11.46 4L13 4.26ZM6.6 20.83C6.37 20.83 6.14 20.74 5.96 20.58C5.78 20.41 5.68 20.19 5.66 19.96L4.1 20.09C4.16 20.72 4.44 21.3 4.91 21.73C5.37 22.15 5.98 22.39 6.6 22.39L6.6 20.83ZM6.64 8.07C7.35 7.46 8.11 6.74 8.61 5.79L7.23 5.06C6.87 5.73 6.3 6.3 5.62 6.89L6.64 8.07ZM20.27 11.52C20.33 11.16 20.32 10.79 20.22 10.43C20.12 10.08 19.95 9.75 19.72 9.47C19.48 9.19 19.19 8.96 18.85 8.81C18.52 8.65 18.16 8.57 17.79 8.57L17.79 10.13C18.38 10.13 18.83 10.67 18.73 11.25L20.27 11.52ZM1.28 20.83C1.44 20.83 1.56 20.95 1.56 21.1L0 21.1C0 21.81 0.57 22.39 1.28 22.39L1.28 20.83ZM10.77 8.22C10.73 8.45 10.74 8.7 10.81 8.93C10.87 9.16 10.98 9.37 11.14 9.55C11.29 9.74 11.49 9.88 11.7 9.98C11.92 10.08 12.16 10.13 12.39 10.13L12.39 8.57C12.38 8.57 12.37 8.57 12.36 8.56C12.35 8.56 12.33 8.55 12.33 8.54C12.32 8.53 12.32 8.52 12.31 8.51C12.31 8.5 12.31 8.48 12.31 8.47L10.77 8.22ZM4.81 10.17C4.8 10.02 4.82 9.87 4.88 9.73C4.94 9.59 5.02 9.46 5.14 9.37L4.12 8.18C3.82 8.44 3.58 8.77 3.43 9.14C3.28 9.51 3.22 9.91 3.25 10.31L4.81 10.17Z"
+                                    fill="#1C9466" fill-opacity="1.000000" fill-rule="nonzero" />
+                              </svg>
+                           </div>
+                           <div class="item-thumb__thumb-down">
+                              <svg width="20.312500" height="22.395508" viewBox="0 0 20.3125 22.3955" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector"
+                                    d="M0.78 9.35L1.55 9.29C1.54 9.09 1.44 8.9 1.29 8.77C1.14 8.64 0.94 8.57 0.74 8.58C0.54 8.58 0.35 8.67 0.21 8.81C0.07 8.96 0 9.15 0 9.35L0.78 9.35ZM18.73 11.25L18 15.5L19.53 15.77L20.27 11.52L18.73 11.25ZM11.45 20.83L6.6 20.83L6.6 22.39L11.45 22.39L11.45 20.83ZM5.66 19.96L4.81 10.17L3.25 10.31L4.1 20.09L5.66 19.96ZM18 15.5C17.47 18.55 14.71 20.83 11.45 20.83L11.45 22.39C15.43 22.39 18.87 19.61 19.53 15.77L18 15.5ZM11.46 4L10.77 8.22L12.31 8.47L13 4.26L11.46 4ZM5.14 9.37L6.64 8.07L5.62 6.89L4.12 8.18L5.14 9.37ZM9.36 3.87L9.86 1.96L8.35 1.57L7.85 3.48L9.36 3.87ZM10.61 1.59L10.76 1.64L11.24 0.15L11.08 0.1L10.61 1.59ZM8.61 5.79C8.94 5.18 9.19 4.54 9.36 3.87L7.85 3.48C7.71 4.03 7.5 4.56 7.23 5.06L8.61 5.79ZM10.76 1.64C10.91 1.68 11.04 1.76 11.15 1.87C11.26 1.99 11.34 2.12 11.38 2.27L12.89 1.88C12.78 1.47 12.58 1.1 12.29 0.8C12 0.5 11.64 0.27 11.24 0.15L10.76 1.64ZM9.86 1.96C9.88 1.89 9.92 1.82 9.97 1.76C10.02 1.7 10.08 1.65 10.15 1.62L9.47 0.21C8.92 0.48 8.5 0.97 8.35 1.57L9.86 1.96ZM10.15 1.62C10.3 1.55 10.46 1.54 10.61 1.59L11.08 0.1C10.55 -0.07 9.98 -0.03 9.47 0.21L10.15 1.62ZM12.39 10.13L17.79 10.13L17.79 8.57L12.39 8.57L12.39 10.13ZM2.57 20.99L1.55 9.29L0 9.42L1.01 21.12L2.57 20.99ZM1.56 21.1L1.56 9.35L0 9.35L0 21.1L1.56 21.1ZM1.01 21.12C1.01 21.09 1.01 21.05 1.02 21.01C1.03 20.98 1.05 20.94 1.08 20.92C1.11 20.89 1.14 20.87 1.17 20.85C1.21 20.84 1.25 20.83 1.28 20.83L1.28 22.39C2.04 22.39 2.63 21.74 2.57 20.99L1.01 21.12ZM13 4.26C13.13 3.47 13.09 2.66 12.89 1.88L11.38 2.27C11.53 2.84 11.55 3.43 11.46 4L13 4.26ZM6.6 20.83C6.37 20.83 6.14 20.74 5.96 20.58C5.78 20.41 5.68 20.19 5.66 19.96L4.1 20.09C4.16 20.72 4.44 21.3 4.91 21.73C5.37 22.15 5.98 22.39 6.6 22.39L6.6 20.83ZM6.64 8.07C7.35 7.46 8.11 6.74 8.61 5.79L7.23 5.06C6.87 5.73 6.3 6.3 5.62 6.89L6.64 8.07ZM20.27 11.52C20.33 11.16 20.32 10.79 20.22 10.43C20.12 10.08 19.95 9.75 19.72 9.47C19.48 9.19 19.19 8.96 18.85 8.81C18.52 8.65 18.16 8.57 17.79 8.57L17.79 10.13C18.38 10.13 18.83 10.67 18.73 11.25L20.27 11.52ZM1.28 20.83C1.44 20.83 1.56 20.95 1.56 21.1L0 21.1C0 21.81 0.57 22.39 1.28 22.39L1.28 20.83ZM10.77 8.22C10.73 8.45 10.74 8.7 10.81 8.93C10.87 9.16 10.98 9.37 11.14 9.55C11.29 9.74 11.49 9.88 11.7 9.98C11.92 10.08 12.16 10.13 12.39 10.13L12.39 8.57C12.38 8.57 12.37 8.57 12.36 8.56C12.35 8.56 12.33 8.55 12.33 8.54C12.32 8.53 12.32 8.52 12.31 8.51C12.31 8.5 12.31 8.48 12.31 8.47L10.77 8.22ZM4.81 10.17C4.8 10.02 4.82 9.87 4.88 9.73C4.94 9.59 5.02 9.46 5.14 9.37L4.12 8.18C3.82 8.44 3.58 8.77 3.43 9.14C3.28 9.51 3.22 9.91 3.25 10.31L4.81 10.17Z"
+                                    fill="#1C9466" fill-opacity="1.000000" fill-rule="nonzero" />
+                              </svg>
+                           </div>
+                           <div class="item-thumb__text">Рекомендую к покупке!</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <button class="main-content__more">
+                  <div class="button-text">загрузить больше</div>
+                  <div class="button-arrow">
+                     <img src="img/button-arrow-right-white.svg" alt="">
+                  </div>
+               </button>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="up">
+            <div class="up-inner">
+               <div class="up-button">
+                  <div class="up-button__img">
+                     <img src="img/arrow-right-green.svg" alt="svg">
+                  </div>
+               </div>
+               <div class="up-text">Наверх</div>
+            </div>
+         </div>
+         <div class="footer-inner">
+            <div class="footer-main">
+               <div class="container">
+                  <div class="footer-main__inner">
+                     <div class="footer-main__left">
+                        <div class="footer-main__logo">
+                           <img src="img/logo.png" alt="logo">
+                        </div>
+                        <div class="footer-main__info">
+                           <div class="footer-main__info-item footer-main__info-text">Интернет-магазин витаминов,
+                              спортивного питания и БАД. Принимаем заказы в розницу и оптом по выгодным ценам. Доставка
+                              по всей России.</div>
+                           <div class="footer-main__info-item footer-main__info-time"><strong>Cамовывоз</strong>
+                              ежедневно с 09:00 до 21:00</div>
+                           <div class="footer-main__info-item footer-main__info-address">Адрес пункта самовывоза:
+                              Ярославское шоссе, 19, к1</div>
+                           <div class="footer-main__info-item footer-main__info-online">Онлайн-заказы принимаются
+                              круглосуточно.</div>
+                        </div>
+                        <div class="footer-main__social">
+                           <div class="footer-main__social-phone">+7 (495) 921-61-21</div>
+                           <div class="footer-main__social-mail">info@vitamin-ia.ru</div>
+                           <div class="footer-main__social-links">
+                              <a href="#" class="footer-main__social-link">
+                                 <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector"
+                                       d="M35.42 5.34L3.85 17.58C2.57 18.15 2.14 19.29 3.54 19.91L11.64 22.5L31.23 10.33C32.3 9.56 33.39 9.77 32.45 10.61L15.63 25.92L15.1 32.4C15.59 33.4 16.48 33.4 17.05 32.9L21.71 28.48L29.68 34.48C31.53 35.58 32.54 34.87 32.94 32.85L38.17 7.96C38.71 5.48 37.78 4.38 35.42 5.34Z"
+                                       fill="#24a3d5" fill-opacity="1.000000" fill-rule="nonzero" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="footer-main__social-link">
+                                 <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector"
+                                       d="M20 5C28.28 5 35 11.71 35 20C35 28.28 28.28 35 20 35C17.34 35 14.74 34.3 12.45 32.96L5 35L7.03 27.54C5.69 25.25 4.99 22.65 5 20C5 11.71 11.71 5 20 5ZM14.88 12.95L14.58 12.96C14.39 12.97 14.2 13.02 14.03 13.11C13.86 13.2 13.71 13.31 13.58 13.45C13.4 13.62 13.3 13.77 13.19 13.91C12.64 14.63 12.34 15.51 12.34 16.42C12.35 17.16 12.54 17.88 12.84 18.54C13.45 19.9 14.46 21.33 15.79 22.66C16.11 22.98 16.43 23.3 16.77 23.6C18.42 25.05 20.4 26.1 22.53 26.67L23.38 26.8C23.66 26.81 23.94 26.79 24.21 26.78C24.65 26.75 25.08 26.64 25.46 26.43C25.66 26.33 25.85 26.22 26.04 26.1C26.04 26.1 26.1 26.06 26.23 25.96C26.43 25.82 26.55 25.71 26.72 25.53C26.85 25.4 26.95 25.25 27.04 25.08C27.15 24.84 27.27 24.37 27.32 23.98C27.35 23.68 27.34 23.52 27.34 23.42C27.33 23.26 27.2 23.09 27.05 23.02L26.18 22.63C26.18 22.63 24.88 22.06 24.08 21.7C23.99 21.66 23.9 21.64 23.81 21.64C23.71 21.63 23.61 21.64 23.51 21.67C23.41 21.71 23.32 21.76 23.25 21.83C23.24 21.83 23.14 21.91 22.05 23.23C21.99 23.31 21.91 23.37 21.81 23.41C21.71 23.44 21.6 23.45 21.5 23.42C21.4 23.4 21.31 23.36 21.22 23.32C21.03 23.24 20.97 23.21 20.84 23.16C19.98 22.79 19.18 22.28 18.48 21.66C18.29 21.49 18.11 21.31 17.93 21.14C17.34 20.57 16.83 19.93 16.4 19.23L16.31 19.09C16.25 19 16.2 18.89 16.16 18.78C16.1 18.56 16.25 18.39 16.25 18.39C16.25 18.39 16.62 17.99 16.79 17.77C16.95 17.56 17.09 17.36 17.18 17.21C17.36 16.93 17.41 16.63 17.32 16.41C16.9 15.38 16.46 14.36 16.02 13.35C15.93 13.15 15.67 13 15.43 12.97C15.35 12.96 15.27 12.96 15.18 12.95C14.98 12.94 14.78 12.94 14.58 12.96L14.88 12.95Z"
+                                       fill="#22c553" fill-opacity="1.000000" fill-rule="nonzero" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="footer-main__social-link">
+                                 <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector"
+                                       d="M39.27 9.62C39.55 8.68 39.27 8 37.94 8L33.52 8C32.39 8 31.88 8.59 31.59 9.24C31.59 9.24 29.35 14.73 26.16 18.28C25.13 19.32 24.66 19.64 24.1 19.64C23.82 19.64 23.41 19.32 23.41 18.38L23.41 9.62C23.41 8.5 23.09 8 22.15 8L15.2 8C14.5 8 14.08 8.52 14.08 9.01C14.08 10.08 15.67 10.32 15.83 13.32L15.83 19.83C15.83 21.26 15.58 21.52 15.01 21.52C13.51 21.52 9.87 16.01 7.7 9.71C7.28 8.49 6.86 8 5.73 8L1.31 8C0.04 8 -0.21 8.59 -0.21 9.25C-0.21 10.42 1.29 16.23 6.77 23.91C10.42 29.15 15.57 32 20.25 32C23.06 32 23.41 31.36 23.41 30.28L23.41 26.31C23.41 25.05 23.68 24.79 24.57 24.79C25.22 24.79 26.35 25.12 28.97 27.65C31.97 30.65 32.46 31.99 34.15 31.99L38.57 31.99C39.83 31.99 40.46 31.36 40.1 30.12C39.7 28.88 38.27 27.07 36.37 24.94C35.34 23.72 33.79 22.41 33.32 21.75C32.67 20.91 32.86 20.53 33.32 19.78C33.33 19.79 38.71 12.2 39.27 9.62Z"
+                                       fill="#0f85c0" fill-opacity="1.000000" fill-rule="nonzero" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="footer-main__social-link">
+                                 <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <path id="Vector"
+                                       d="M20.4 6.66C21.29 6.67 23.52 6.69 25.88 6.78L26.73 6.82C29.11 6.93 31.49 7.12 32.67 7.45C34.24 7.9 35.48 9.19 35.9 10.82C36.56 13.42 36.65 18.49 36.66 19.72L36.66 19.98L36.66 20.27C36.65 21.49 36.56 26.57 35.9 29.16C35.48 30.81 34.24 32.1 32.67 32.53C31.49 32.86 29.11 33.06 26.73 33.17L25.88 33.21C23.52 33.3 21.29 33.32 20.4 33.33L20.01 33.33L19.58 33.33C17.7 33.32 9.82 33.23 7.32 32.53C5.75 32.09 4.51 30.8 4.09 29.16C3.42 26.56 3.34 21.49 3.33 20.27L3.33 19.72C3.34 18.49 3.42 13.42 4.09 10.82C4.51 9.18 5.75 7.89 7.32 7.45C9.82 6.76 17.7 6.67 19.59 6.66L20.4 6.66ZM16.66 14.16L16.66 25.83L26.66 20L16.66 14.16Z"
+                                       fill="#b6341a" fill-opacity="1.000000" fill-rule="nonzero" />
+                                 </svg>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="footer-main__right">
+                        <div class="footer-main__right-title">Подпишитесь на нашу e-mail рассылку</div>
+                        <div class="footer-right__sub">
+                           <form action="/sub" method="post">
+                              <input placeholder="E-mail" type="email" class="footer-right__sub-input input" required>
+                              <button class="footer-right__sub-button" type="submit">
+                                 <div class="button-text">подписаться</div>
+                                 <img src="img/button-arrow-right-white.svg" alt="svg">
+                              </button>
+                           </form>
+                        </div>
+                        <div class="footer-right__lists">
+                           <div class="footer-right__list-wrapper">
+                              <div class="footer-right__list-title">каталог</div>
+                              <ul class="footer-right__list">
+                                 <li class="footer-right__list-item">
+                                    <a href="catalog.html" class="footer-right__list-link">Витамины</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="catalog.html" class="footer-right__list-link">БАДы</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="catalog.html" class="footer-right__list-link">Спортивное питание</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="best.html" class="footer-right__list-link">Бестселлеры</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="news.html" class="footer-right__list-link">Новинки</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="sales.html" class="footer-right__list-link">Акции и скидки</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="footer-right__list-wrapper">
+                              <div class="footer-right__list-title">навигация</div>
+                              <ul class="footer-right__list">
+                                 <li class="footer-right__list-item">
+                                    <a href="map.html" class="footer-right__list-link">Карта сайта</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="index.html" class="footer-right__list-link">Главная</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="about.html" class="footer-right__list-link">О компании</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="brands.html" class="footer-right__list-link">Бренды</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="news.html" class="footer-right__list-link">Статьи и новости</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="feedback.html" class="footer-right__list-link">Отзывы о товарах</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="footer-right__list-wrapper">
+                              <div class="footer-right__list-title">информация</div>
+                              <ul class="footer-right__list">
+                                 <li class="footer-right__list-item">
+                                    <a href="how.html" class="footer-right__list-link">Как сделать заказ</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="delivery.html" class="footer-right__list-link">Доставка и оплата</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="catalog.html" class="footer-right__list-link">Оптовый прайс-лист</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="contacts.html" class="footer-right__list-link">Контакты</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="agree.html" class="footer-right__list-link">Пользовательское соглашение</a>
+                                 </li>
+                                 <li class="footer-right__list-item">
+                                    <a href="privacy.html" class="footer-right__list-link">Политика конфиденциальности и оферта</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-bot">
+               <div class="container">
+                  <div class="footer-bot__inner">
+                     <div class="footer-bot__privacy">© 2025. Интернет-магазин Витаминия. Все права защищены.</div>
+                     <div class="footer-bot__logos">
+                        <div class="footer-bot__logo">
+                           <img src="img/tbank-logo.svg" alt="bank-logo">
+                        </div>
+                        <div class="footer-bot__logo">
+                           <img src="img/alfa-logo.svg" alt="bank-logo">
+                        </div>
+                        <div class="footer-bot__logo">
+                           <img src="img/mir-logo.svg" alt="bank-logo">
+                        </div>
+                        <div class="footer-bot__logo">
+                           <img src="img/sber-logo.svg" alt="bank-logo">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-under">
+               <button class="footer-under__catalog">
+                  <div class="footer-under__catalog-img">
+                     <img src="img/catalog-search.svg" alt="svg">
+                  </div>
+                  <div class="footer-under__catalog-text">Каталог</div>
+               </button>
+               <a href="confirm.html" class="footer-under__link footer-under__link-cart">
+                  <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <path id="Vector"
+                        d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z"
+                        fill="#7C7C7C" fill-opacity="1.000000" fill-rule="nonzero" />
+                  </svg>
+                  <div class="cart-number">8</div>
+               </a>
+               <a href="#" class="footer-under__link footer-under__link-fav">
+                  <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <path id="Vector"
+                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
+                        stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" />
+                  </svg>
+               </a>
+               <a href="me.html" class="footer-under__link footer-under__link-acc">
+                  <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <path id="Vector"
+                        d="M28.73 29.83C29.01 29.55 29.16 29.18 29.16 28.8L29.16 26.98C29.17 22.89 23.37 19.68 17.5 19.68C11.62 19.68 5.83 22.89 5.83 26.98L5.83 28.8C5.83 29.18 5.98 29.55 6.26 29.83C6.53 30.1 6.9 30.26 7.29 30.26L27.7 30.26C28.09 30.26 28.46 30.1 28.73 29.83ZM22.35 12C22.09 12.64 21.7 13.22 21.21 13.71C20.72 14.2 20.14 14.58 19.51 14.85C18.87 15.11 18.19 15.25 17.5 15.25C16.81 15.25 16.12 15.11 15.48 14.85C14.85 14.58 14.27 14.2 13.78 13.71C13.29 13.22 12.9 12.64 12.64 12C12.38 11.36 12.24 10.68 12.24 9.99C12.24 8.6 12.79 7.26 13.78 6.27C14.76 5.29 16.1 4.73 17.5 4.73C18.89 4.73 20.23 5.29 21.21 6.27C22.2 7.26 22.75 8.6 22.75 9.99C22.75 10.68 22.62 11.36 22.35 12Z"
+                        stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" />
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/header.js"></script>
+</body>
+
+</html>

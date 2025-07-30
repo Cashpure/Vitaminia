@@ -1,0 +1,135 @@
+@charset "UTF-8";
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: calc(0.521vw + 10px);
+}
+.location .location-slesh {
+  margin: 0 5px;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.main-title {
+  margin-bottom: 30px;
+}
+
+.home-button {
+  width: 291px;
+  position: relative;
+  grid-column: 1/span 2;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+.home-button .button-text {
+  border-radius: 30px;
+  background-color: #F0EEEE;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #00582A;
+  width: calc(100% - 75px);
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+.home-button .button-arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #F0EEEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.home-button .button-decor {
+  position: absolute;
+  z-index: 0;
+  right: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.main-content__mid {
+  margin-top: 30px;
+}
+
+.main-content__block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+}
+
+.main-link {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  transition: all 0.1s;
+}
+.main-link:hover {
+  color: #00582A;
+}
+
+.main-link__big {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  transition: all 0.1s;
+}
+.main-link__big:hover {
+  color: #00582A;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+}
+
+.brand-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brand-column strong {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.brand-column a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s ease;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.brand-column a:hover {
+  color: #00582A;
+  /* можно заменить на твой цвет */
+}/*# sourceMappingURL=style-map.css.map */

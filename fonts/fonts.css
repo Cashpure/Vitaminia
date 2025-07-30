@@ -1,0 +1,40 @@
+@font-face {
+   font-family: Jost;
+   src: local("Jost"), local("Jost-Regular"),
+   url(Jost-Regular.woff2) format(woff2),
+   url(Jost-Regular.woff) format(woff),
+   url(Jost-Regular.eot) format(eot);
+   font-weight: 400;
+}
+@font-face {
+   font-family: Jost;
+   src: local("Jost"), local("Jost-Medium"),
+   url(Jost-Medium.woff2) format(woff2),
+   url(Jost-Medium.woff) format(woff),
+   url(Jost-Medium.eot) format(eot);
+   font-weight: 500;
+}
+@font-face {
+   font-family: Jost;
+   src: local("Jost"), local("Jost-SemiBold"),
+   url(Jost-SemiBold.woff2) format(woff2),
+   url(Jost-SemiBold.woff) format(woff),
+   url(Jost-SemiBold.eot) format(eot);
+   font-weight: 600;
+}
+@font-face {
+   font-family: Manrope;
+   src: local("Manrope"), local("Manrope-Regular"),
+   url(Manrope-Regular.woff2) format(woff2),
+   url(Manrope-Regular.woff) format(woff),
+   url(Manrope-Regular.eot) format(eot);
+   font-weight: 400;
+}
+@font-face {
+   font-family: Manrope;
+   src: local("Manrope"), local("Manrope-Bold"),
+   url(Manrope-Bold.woff2) format(woff2),
+   url(Manrope-Bold.woff) format(woff),
+   url(Manrope-Bold.eot) format(eot);
+   font-weight: 700;
+}

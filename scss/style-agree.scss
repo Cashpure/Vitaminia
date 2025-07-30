@@ -1,0 +1,23 @@
+.location {
+   display: flex;
+   align-items: center;
+   font-size: 1.6rem;
+   margin-bottom: calc(0.521vw + 10px); //20
+
+   .location-slesh {
+      margin: 0 5px;
+   }
+}
+
+.main {
+   margin-top: 20px;
+}
+
+.main-title {
+   margin-bottom: 30px;
+}
+
+.main-text {
+   font-size: 1.6rem;
+   white-space: pre-wrap;
+}

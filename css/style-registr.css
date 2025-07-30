@@ -1,0 +1,282 @@
+@charset "UTF-8";
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: calc(0.521vw + 10px);
+}
+.location .location-slesh {
+  margin: 0 5px;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.registr {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.registr-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px;
+  box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  background: rgb(249, 249, 249);
+  margin-bottom: 30px;
+}
+.registr-top .registr-button {
+  padding: 15px 45px;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #C9C9C9;
+  background-color: transparent;
+}
+.registr-top .registr-button--active {
+  color: white;
+  border-radius: 40px;
+  box-shadow: inset 0px 4px 11.1px 0px rgb(40, 178, 125);
+  background: rgb(0, 88, 42);
+}
+
+.registr {
+  min-height: 600px;
+}
+
+.registr-form {
+  display: none;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.registr-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+.registr-form label a {
+  text-decoration: underline;
+}
+.registr-form .label-check {
+  display: initial;
+  color: #5E5E5E;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 30px;
+}
+.registr-form .custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.registr-form .custom-checkbox input[type=checkbox] {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  transition: background 0.2s;
+  box-shadow: inset 2px -6px 20px 0px rgba(0, 0, 0, 0.1);
+  background: rgb(249, 249, 249);
+}
+.registr-form .custom-checkbox input[type=checkbox]:checked {
+  background-color: #00582A;
+}
+.registr-form .custom-checkbox input[type=checkbox]:checked::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+.registr-form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.registr-form .registr-button {
+  position: relative;
+  grid-column: 1/span 2;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+.registr-form .registr-button .button-text {
+  border-radius: 30px;
+  background-color: #00582A;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: white;
+  width: calc(100% - 75px);
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+.registr-form .registr-button .button-arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #00582A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.registr-form .registr-button .button-decor {
+  position: absolute;
+  z-index: 0;
+  right: 48px;
+  display: flex;
+  align-items: center;
+}
+.registr-form .registr-button:hover {
+  background-color: #00582A;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.registr-form .registr-button:hover .button-decor {
+  display: none;
+}
+.registr-form .registr-button:hover .button-arrow {
+  border-radius: 0;
+}
+.registr-form .registr-button:hover .button-text {
+  border-radius: 0;
+}
+.registr-form .registr-or {
+  font-size: 1.6rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.registr-form .registr-or a {
+  text-decoration: underline;
+}
+
+.registr-form__aut label {
+  color: #7E7E7E;
+}
+.registr-form__aut .custom-checkbox-aut {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+.registr-form__aut .registr-form__aut-remind {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.registr-form__aut .registr-or {
+  margin-bottom: 20px;
+}
+
+.registr-form__aut-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: inset -4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  background: rgb(240, 238, 238);
+  transition: all 0.1s;
+}
+.registr-form__aut-button .button-text {
+  text-transform: uppercase;
+  color: #00582A;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.registr-form__aut-button .button-arrow {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background-color: #00582A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registr-form__aut-button:hover {
+  background-color: #00582A;
+}
+.registr-form__aut-button:hover .button-text {
+  color: white;
+}
+
+.registr-form--active {
+  display: block;
+}
+
+.congrats {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  max-width: 450px;
+  text-align: center;
+}
+.congrats .congrats-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.congrats .congrats-text {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.congrats .congrats-link {
+  color: #7C7C7C;
+  text-decoration: underline;
+  margin-top: 18px;
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .registr-top {
+    background-color: transparent;
+    box-shadow: none;
+    display: block;
+  }
+  .registr-top .registr-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    border-radius: 40px;
+    display: block;
+  }
+  .registr-top .registr-top__reg {
+    margin-bottom: 30px;
+  }
+  .registr-top .registr-button--active {
+    color: white;
+    border-radius: 40px;
+    box-shadow: inset 0px 4px 11.1px 0px rgb(40, 178, 125);
+    background: rgb(0, 88, 42);
+  }
+}
+@media (max-width: 400px) {
+  .registr-top .registr-button {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=style-registr.css.map */

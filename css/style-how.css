@@ -1,0 +1,29 @@
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: calc(0.521vw + 10px);
+}
+.location .location-slesh {
+  margin: 0 5px;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.main-title {
+  margin-bottom: 30px;
+}
+
+.main-title-2 {
+  margin-top: 60px;
+}
+
+.main-text__item {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.main-text__item span {
+  display: block;
+}/*# sourceMappingURL=style-how.css.map */
