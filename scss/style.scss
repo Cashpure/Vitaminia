@@ -2,6 +2,10 @@
    margin-bottom: calc(2.083vw + 20px); //60
 }
 
+.swiper {
+   overflow: visible;
+}
+
 .swiper-1 {
    height: 600px;
    width: 100%;
@@ -78,6 +82,17 @@
          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
          overflow: hidden;
 
+         &:hover {
+            .main-block-1__item-bot {
+               .main-block-1__bot-button {
+
+                  background-color: #00582A;
+                  box-shadow: none;
+                  backdrop-filter: none;
+               }
+            }
+         }
+
          .main-block-1__item-img {
             position: absolute;
             z-index: -1;
@@ -123,12 +138,6 @@
                background: rgba(255, 255, 255, 0.3);
                padding: 21px;
                transition: all .1s;
-
-               &:hover {
-                  background-color: #00582A;
-                  box-shadow: none;
-                  backdrop-filter: none;
-               }
             }
          }
       }
@@ -201,8 +210,8 @@
          padding: 10px 10px 20px 10px;
          position: relative;
          margin-right: 1.563vw;
-         max-width: 380px;
-         min-width: 315px;
+         max-width: 280px;
+         min-width: 260px;
 
          .slide-2-heart,
          .slide-6-heart {
@@ -306,7 +315,8 @@
 
    .main-block-3__main-item,
    .swiper-slide-3 {
-      width: auto !important;
+      max-width: 280px;
+      min-width: 260px;
       cursor: pointer;
 
       &:hover {
@@ -491,8 +501,8 @@
          padding: 10px 10px 20px 10px;
          position: relative;
          margin-right: 1.563vw;
-         min-width: 315px;
-         max-width: 380px;
+         max-width: 280px;
+         min-width: 260px;
 
          img {
             width: 100%;
@@ -960,6 +970,10 @@
 @media(max-width: 1230px) {
    .main-block-3__main {
       .main-block-3__main-item {
+         width: 23.171vw !important; //285
+         height: 23.171vw; //285
+         min-width: 0;
+
          .main-block-3-item__inner {
             width: 23.171vw; //285
             height: 23.171vw; //285
@@ -1128,14 +1142,17 @@
 
    .main-block-3__main {
       .main-block-3__main-item {
+         width: 200px !important; //285
+         height: 200px; //285
+
          .main-block-3-item__inner {
-            width: 285px; //285
-            height: 285px; //285
+            width: 200px; //285
+            height: 200px; //285
          }
 
          .main-block-3__item-img {
-            width: 285px; //285
-            height: 285px; //285
+            width: 200px; //285
+            height: 200px; //285
          }
       }
    }

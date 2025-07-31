@@ -1,10 +1,56 @@
+document.addEventListener("DOMContentLoaded", () => {
+   const buttons = document.querySelectorAll(".cart-button");
 
+   buttons.forEach(button => {
+      const path = button.querySelector(".button-decor svg path");
+      if (!path) return;
+
+      const originalD = path.getAttribute("d");
+      const squareD = "M0 0H40V40H0V0Z";
+
+      let animationFrame;
+      let currentProgress = 0;
+      const duration = 200;
+
+      function animate(from, to, reverse = false) {
+         const interpolator = flubber.interpolate(from, to);
+         const start = performance.now();
+
+         cancelAnimationFrame(animationFrame);
+
+         function frame(now) {
+            const elapsed = now - start;
+            const t = Math.min(elapsed / duration, 1);
+            path.setAttribute("d", interpolator(reverse ? 1 - t : t));
+
+            if (t < 1) {
+               animationFrame = requestAnimationFrame(frame);
+            }
+         }
+
+         animationFrame = requestAnimationFrame(frame);
+      }
+
+      button.addEventListener("mouseenter", () => {
+         animate(originalD, squareD);
+      });
+
+      button.addEventListener("mouseleave", () => {
+         animate(originalD, squareD, true);
+      });
+   });
+});
 
 const swiper = new Swiper('.swiper-1', {
    // Optional parameters
    direction: 'horizontal',
    loop: false,
    draggable: false,
+   slidesPerView: 'auto',
+   freeMode: {
+      enabled: true,
+   },
+
 
    breakpoints: {
       // when window width is >= 768px
@@ -39,7 +85,7 @@ const swiper2 = new Swiper('.swiper-2', {
    // Optional parameters
    breakpoints: {
       1230: {
-         spaceBetween: 30,
+         spaceBetween: 20,
       },
       768: {
          spaceBetween: 20,
@@ -58,10 +104,24 @@ const swiper2 = new Swiper('.swiper-2', {
    loop: false,
    slidesPerView: 3,
    spaceBetween: 15,
+   slidesPerView: 'auto',
+   freeMode: {
+      enabled: true,
+   },
+
 
    navigation: {
       nextEl: '.swiper-button-next-2',
       prevEl: '.swiper-button-prev-2',
+   },
+});
+const swiper3 = new Swiper('.swiper-3', {
+   direction: 'horizontal',
+   loop: false,
+   spaceBetween: 15,
+   slidesPerView: 'auto',
+   freeMode: {
+      enabled: true,
    },
 });
 
@@ -69,8 +129,11 @@ const swiper5 = new Swiper('.swiper-5', {
    // Optional parameters
    direction: 'horizontal',
    loop: false,
-   slidesPerView: 2,
-   spaceBetween: 30,
+   slidesPerView: 'auto',
+   spaceBetween: 20,
+   freeMode: {
+      enabled: true,
+   },
 
    breakpoints: {
       1230: {
@@ -90,14 +153,18 @@ const swiper6 = new Swiper('.swiper-6', {
    // Optional parameters
    breakpoints: {
       1230: {
-         spaceBetween: 30,
+         spaceBetween: 20,
       },
 
    },
    direction: 'horizontal',
    loop: false,
-   slidesPerView: 3,
    spaceBetween: 15,
+   slidesPerView: 'auto',
+   freeMode: {
+      enabled: true,
+   },
+
 
    navigation: {
       nextEl: '.swiper-button-next-6',
@@ -109,12 +176,16 @@ const swiper7 = new Swiper('.swiper-7', {
    // Optional parameters
    direction: 'horizontal',
    loop: false,
-   slidesPerView: 2,
    spaceBetween: 15,
+   slidesPerView: 'auto',
+   freeMode: {
+      enabled: true,
+   },
+
 
    breakpoints: {
       1230: {
-         spaceBetween: 30,
+         spaceBetween: 20,
          scrollbar: {
             enabled: true
          },
@@ -142,21 +213,6 @@ function initSwiper8() {
    }
 }
 
-let swiper3;
-function initSwiper3() {
-   const screenWidth = window.innerWidth;
-
-   if (screenWidth < 768 && !swiper3) {
-      swiper3 = new Swiper('.swiper-3', {
-         slidesPerView: 1,
-         loop: false,
-         spaceBetween: 10,
-      });
-   } else if (screenWidth >= 768 && swiper3) {
-      swiper3.destroy(true, true);
-      swiper3 = undefined;
-   }
-}
 
 let swiper4;
 function initSwiper4() {
@@ -175,13 +231,11 @@ function initSwiper4() {
 }
 
 window.addEventListener('load', () => {
-   initSwiper3();
    initSwiper4();
    initSwiper8();
 });
 
 window.addEventListener('resize', () => {
-   initSwiper3();
    initSwiper4();
    initSwiper8();
 });

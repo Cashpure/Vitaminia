@@ -31,12 +31,12 @@ h2 {
 
 .wrapper {
    width: 100%;
-   min-height: 1000px;
+   min-height: 100%;
    overflow: hidden;
 }
 
 .container {
-   width: 83.854vw;//1610
+   width: 83.854vw; //1610
    max-width: 1610px;
    padding: 0 15px;
    margin: 0 auto;
@@ -98,27 +98,67 @@ h2 {
 }
 
 .cart-button {
-   color: #00582A;
-   border-radius: 30px;
-   text-transform: uppercase;
-   font-weight: 500;
-   font-size: 1.6rem;
+   width: 100%;
+   position: relative;
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   height: 60px;
    background-color: transparent;
-   background: url(../img/button-bugger.svg) no-repeat center;
-   background-size: contain;
-   width: 100%;
-   height: 50px;
+   border-radius: 30px;
+   overflow: hidden;
 
-   .cart-button__text {
-      margin-left: 57px;
-      white-space: nowrap;
+   .button-text {
+      border-radius: 30px;
+      background-color: #F0EEEE;
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: #00582A;
+      width: calc(100% - 75px);
+      text-transform: uppercase;
+      padding: 20px 0;
+      height: 60px;
+      transition: all .3s;
    }
 
-   .cart-button__img {
-      margin-right: 11px;
+   .button-arrow {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #F0EEEE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      transition: all .3s;
+   }
+
+   .button-decor {
+      position: absolute;
+      z-index: 0;
+      right: 48px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      overflow: hidden;
+
+      svg {
+         transition: transform 0.2s ease;
+         transform-origin: center;
+      }
+   }
+
+   &:hover {
+      .button-text {
+         border-radius: 0;
+      }
+      .button-arrow {
+         border-radius: 0;
+      }
+      .button-decor {
+         svg {
+            transform: scale(1.5);
+         }
+      }
    }
 }
 
@@ -147,7 +187,7 @@ h2 {
 }
 
 .overlay--active {
-   z-index: 2;
+   z-index: 5;
    opacity: 100;
 }
 
@@ -156,7 +196,7 @@ h2 {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   z-index: 3;
+   z-index: 10;
    display: none;
 
    .call-request__inner {
@@ -565,15 +605,7 @@ h2 {
 
    .header-bot__list {}
 
-   .cart-button {
-      .cart-button__img {
-         height: 24px;
-      }
-
-      .cart-button__text {
-         margin-left: 90px !important;
-      }
-   }
+   .cart-button {}
 
 
 }

@@ -11,25 +11,25 @@ const headerLinkCatalog = document.querySelector('.header-bot__link-catalog')
 const headerLinkCatalogArrow = document.querySelector('.catalog-arrow')
 const cartBtnText = document.querySelectorAll('.cart-button__text')
 
-if (window.innerWidth <= 1230) {
-   cartBtnText.innerHTML = 'в корзину'
-   cartBtnText.forEach((el) => {
-      el.innerHTML = 'в корзину'
-   })
-} else cartBtnText.forEach((el) => {
-   el.innerHTML = 'Добавить в корзину'
-})
+// if (window.innerWidth <= 1230) {
+//    cartBtnText.innerHTML = 'в корзину'
+//    cartBtnText.forEach((el) => {
+//       el.innerHTML = 'в корзину'
+//    })
+// } else cartBtnText.forEach((el) => {
+//    el.innerHTML = 'Добавить в корзину'
+// })
 
-window.onresize = () => {
-   if (window.innerWidth <= 1230) {
-      cartBtnText.innerHTML = 'в корзину'
-      cartBtnText.forEach((el) => {
-         el.innerHTML = 'в корзину'
-      })
-   } else cartBtnText.forEach((el) => {
-      el.innerHTML = 'Добавить в корзину'
-   })
-}
+// window.onresize = () => {
+//    if (window.innerWidth <= 1230) {
+//       cartBtnText.innerHTML = 'в корзину'
+//       cartBtnText.forEach((el) => {
+//          el.innerHTML = 'в корзину'
+//       })
+//    } else cartBtnText.forEach((el) => {
+//       el.innerHTML = 'Добавить в корзину'
+//    })
+// }
 
 phoneIcon.onmouseover = () => {
    phoneIcon = document.querySelector('.header-top__phone-inner')
