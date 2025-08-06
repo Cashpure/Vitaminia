@@ -3,9 +3,12 @@
 }
 
 .up {
-   position: absolute;
-   top: -100px;
-   right: 60px;
+   position: fixed;
+   bottom: 100px;
+   right: 23px;
+   transition: opacity .2s;
+   opacity: 0;
+   z-index: 3;
 
    .up-inner {
       .up-button {
@@ -125,30 +128,55 @@
             }
 
             .footer-right__sub-button {
+               position: relative;
+               grid-column: 1 / span 2;
+               // background: url(../img/button-bugger-green.svg) no-repeat center;
+               background-size: cover;
                display: inline-flex;
                align-items: center;
-               color: white;
-               font-weight: 500;
-               font-size: 1.6rem;
-               text-transform: uppercase;
-               border-radius: 30px;
-               width: 271px;
                height: 60px;
-               background: url(../img/button-bugger-orange.png) center no-repeat;
-               background-size: cover;
+               background-color: transparent;
+               width: 271px;
 
                .button-text {
-                  margin: 0 70px 0 40px;
-                  transition: all .1s;
+                  border-radius: 30px;
+                  background-color: #00582A;
+                  font-weight: 500;
+                  font-size: 1.6rem;
+                  color: white;
+                  width: calc(100% - 75px);
+                  text-transform: uppercase;
+                  padding: 20px 0;
+                  position: relative;
+                  z-index: 2;
                }
 
-               &:hover {
-                  background: #E77334;
-                  box-shadow: inset -4px 4px 20px 0px rgb(179, 101, 0);
+               .button-arrow {
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background-color: #00582A;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-left: auto;
+                  transition: all .3s;
 
-                  .button-text {
-                     margin-right: 10px;
+
+                  img {
+                     opacity: 1;
+                     transition: all .1s;
                   }
+               }
+
+               .button-decor {
+                  position: absolute;
+                  z-index: 0;
+                  right: 48px;
+                  display: flex;
+                  align-items: center;
+                  opacity: 1;
+                  transition: all .1s;
                }
             }
          }
@@ -235,10 +263,13 @@
    .footer-under__catalog {
       display: inline-flex;
       align-items: center;
-      padding: 0.977vw 1.628vw;
+      justify-content: center;
+      // padding: 0.977vw 1.628vw;
       border-radius: 30px;
       color: white;
-      background-color: #E77334;
+      background-color: #00582A;
+      width: 100px;
+      height: 35px;
 
       .footer-under__catalog-img {
          margin-right: 10px;
@@ -247,7 +278,14 @@
       .footer-under__catalog-text {
          font-size: 1.4rem;
       }
+   }
 
+   .footer-under__catalog-text-2 {
+      display: none;
+   }
+
+   .footer-under__link--active {
+      display: none;
    }
 
    .footer-under__link {
@@ -263,6 +301,7 @@
          }
       }
 
+
       .cart-number {
          position: absolute;
          top: -9px;
@@ -275,6 +314,54 @@
          padding: 5px 8px;
          white-space: nowrap;
       }
+   }
+}
+
+.footer-under__catalog--active {
+   justify-content: start;
+
+   .footer-under__catalog-text-2 {
+      display: initial;
+      margin-left: 36%;
+      transform: translateX(-50%);
+   }
+
+   .footer-under__catalog-text-1 {
+      display: none;
+   }
+
+   .footer-under__catalog-text {
+      color: white;
+      font-size: 1.6rem;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         right: -11px;
+         top: 40%;
+         content: "";
+         width: 2px;
+         height: 20px;
+         border-radius: 4px;
+         background-color: white;
+         transform: rotate(45deg) translateY(-50%);
+      }
+
+      &::after {
+         position: absolute;
+         right: -25px;
+         top: 40%;
+         content: "";
+         width: 2px;
+         height: 20px;
+         border-radius: 4px;
+         background-color: white;
+         transform: rotate(-45deg) translateY(-50%);
+      }
+   }
+
+   .footer-under__catalog-img {
+      display: none;
    }
 }
 
@@ -328,6 +415,7 @@
    .footer {
       padding-bottom: 51px;
    }
+
    .footer-main {
       .footer-main__inner {
          padding-bottom: 100px;

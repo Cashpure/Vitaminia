@@ -58,6 +58,7 @@
   bottom: -150px;
   right: -8.594vw;
   width: 36.458vw;
+  max-width: 700px;
 }
 .main-block-1 .main-block-1__right .main-block-1__right-img img {
   width: 100%;

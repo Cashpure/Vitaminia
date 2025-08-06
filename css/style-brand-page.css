@@ -240,6 +240,7 @@
   width: calc(100% - 60px);
   text-transform: uppercase;
   padding: 14px 0;
+  height: 50px;
 }
 .swiper-slide-best .slide-best-button .button-arrow {
   width: 50px;

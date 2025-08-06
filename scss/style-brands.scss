@@ -131,6 +131,23 @@
          box-shadow: inset -4px 4px 12px 0px rgba(124, 124, 124, 0.33);
          backdrop-filter: blur(4px);
          background: rgb(245, 245, 245);
+         transition: background-color .1s;
+
+         svg {
+            path {
+               transition: all .1s;
+            }
+         }
+
+         &:hover {
+            background-color: #00582A;
+
+            svg {
+               path {
+                  stroke: white;
+               }
+            }
+         }
       }
    }
 }

@@ -122,6 +122,10 @@
   overflow: hidden;
   margin-top: 30px;
 }
+.main-map__map iframe {
+  width: 100%;
+  height: 450px;
+}
 
 @media (max-width: 900px) {
   .main-call-request__inner {

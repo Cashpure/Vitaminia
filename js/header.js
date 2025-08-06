@@ -7,9 +7,14 @@ const callRequest = document.querySelector('.call-request')
 const cartNumber = document.querySelector('.cart-number')
 let cartNumberDefault = "8"
 const cart = document.querySelector('.header-main__link-cart')
-const headerLinkCatalog = document.querySelector('.header-bot__link-catalog')
+const headerLinkCatalog = document.querySelectorAll('.catalog-header')
 const headerLinkCatalogArrow = document.querySelector('.catalog-arrow')
+const footerLinkCatalog = document.querySelector('.footer-under__catalog')
+const catalogMenu = document.querySelector('.catalog-menu')
+const catalogMenuTitle = document.querySelectorAll('.catalog-menu__block-title')
+const catalogMenuTitleLink = document.querySelectorAll('.catalog-menu__block-title-link')
 const cartBtnText = document.querySelectorAll('.cart-button__text')
+const container = document.querySelector('.container')
 
 // if (window.innerWidth <= 1230) {
 //    cartBtnText.innerHTML = 'в корзину'
@@ -67,16 +72,80 @@ cart.onmouseout = () => {
    cartNumber.innerHTML = cartNumberDefault
 }
 
-headerLinkCatalog.onclick = () => {
+headerLinkCatalog.forEach((el) => {
+   el.onclick = () => {
+      catalogMenu.classList.toggle('catalog-menu--active')
+      headerLinkCatalogArrow.classList.toggle('catalog-arrow--active')
+      document.querySelector('.catalog-main').classList.toggle('catalog-main--active')
+
+      if (window.innerWidth <= 1230) {
+         document.querySelector('.header-main__inner').classList.toggle('header-main__inner--catalog')
+      }
+   }
+})
+
+footerLinkCatalog.onclick = () => {
+   footerLinkCatalog.classList.toggle('footer-under__catalog--active')
+   catalogMenu.classList.toggle('catalog-menu--active')
    headerLinkCatalogArrow.classList.toggle('catalog-arrow--active')
+   document.querySelector('.catalog-main').classList.toggle('catalog-main--active')
+   document.querySelectorAll('.footer-under__link').forEach((el) => {
+      el.classList.toggle('footer-under__link--active')
+   })
+}
+
+catalogMenuTitleLink.forEach((el) => {
+   el.onmouseover = () => {
+      el.classList.add('catalog-menu__block-title-link--active')
+   }
+})
+catalogMenuTitleLink.forEach((el) => {
+   el.onmouseout = () => {
+      el.classList.remove('catalog-menu__block-title-link--active')
+   }
+})
+
+const catalogMenuSize = () => {
+   if (window.innerWidth >= 1230) {
+      catalogMenu.style.width = getComputedStyle(container).getPropertyValue('width')
+      document.querySelectorAll('.catalog-menu__block-list').forEach((el) => {
+         el.style.display = 'block'
+      })
+   } else {
+      catalogMenu.style.width = '100%'
+      catalogMenu.classList.remove('catalog-menu--active')
+      headerLinkCatalogArrow.classList.remove('catalog-arrow--active')
+      document.querySelector('.catalog-main').classList.remove('catalog-main--active')
+      document.querySelector('.header-main__inner').classList.remove('header-main__inner--catalog')
+      document.querySelectorAll('.footer-under__link').forEach((el) => {
+         el.classList.remove('footer-under__link--active')
+      })
+      footerLinkCatalog.classList.remove('footer-under__catalog--active')
+      document.querySelectorAll('.catalog-menu__block-list').forEach((el) => {
+         el.style.display = 'none'
+      })
+   }
+}
+
+window.onload = () => {
+   catalogMenuSize()
+}
+window.onresize = () => {
+   catalogMenuSize()
 }
 
 const up = document.querySelector('.up')
 up.onclick = () => {
    window.scrollTo({
-      top:0,
+      top: 0,
       behavior: 'smooth'
    })
+}
+
+window.onscroll = () => {
+   if (window.scrollY >= 200) {
+      up.style.opacity = '1'
+   } else up.style.opacity = '0'
 }
 
 const phoneInput = document.querySelectorAll('.input-phone');
@@ -133,3 +202,57 @@ function onPhoneKeyDown(e) {
       input.value = '';
    }
 }
+
+document.querySelectorAll('.catalog-title__acc').forEach(toggle => {
+   toggle.addEventListener('click', () => {
+      if (window.innerWidth <= 1230) {
+         const content = toggle.nextElementSibling;
+         content.style.display = content.style.display === 'block' ? 'none' : 'block';
+         toggle.classList.toggle('catalog-title__acc--active')
+      }
+   });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+   const buttons = document.querySelectorAll(".button-anim");
+
+   buttons.forEach(button => {
+      const path = button.querySelector(".button-decor svg path");
+      if (!path) return;
+
+      const originalD = path.getAttribute("d");
+      const squareD = "M0 0H40V40H0V0Z";
+
+      let animationFrame;
+      let currentProgress = 0;
+      const duration = 200;
+
+      function animate(from, to, reverse = false) {
+         const interpolator = flubber.interpolate(from, to);
+         const start = performance.now();
+
+         cancelAnimationFrame(animationFrame);
+
+         function frame(now) {
+            const elapsed = now - start;
+            const t = Math.min(elapsed / duration, 1);
+            path.setAttribute("d", interpolator(reverse ? 1 - t : t));
+
+            if (t < 1) {
+               animationFrame = requestAnimationFrame(frame);
+            }
+         }
+
+         animationFrame = requestAnimationFrame(frame);
+      }
+
+      button.addEventListener("mouseenter", () => {
+         animate(originalD, squareD);
+      });
+
+      button.addEventListener("mouseleave", () => {
+         animate(originalD, squareD, true);
+      });
+   });
+});

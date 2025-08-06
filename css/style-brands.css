@@ -124,6 +124,16 @@
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   background: rgb(245, 245, 245);
+  transition: background-color 0.1s;
+}
+.main-brands__item .item-bottom .item-bottom__button svg path {
+  transition: all 0.1s;
+}
+.main-brands__item .item-bottom .item-bottom__button:hover {
+  background-color: #00582A;
+}
+.main-brands__item .item-bottom .item-bottom__button:hover svg path {
+  stroke: white;
 }
 
 .brand-grid {

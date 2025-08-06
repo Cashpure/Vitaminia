@@ -17,4 +17,6 @@ function animate() {
    requestAnimationFrame(animate);
 }
 
-window.onload = animate;
+document.addEventListener("DOMContentLoaded", () => {
+   animate()
+})

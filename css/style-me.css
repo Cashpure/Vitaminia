@@ -146,9 +146,21 @@
 .main-block-1 .main-block-1__right .personal-line .personal-line__form .personal-line__button {
   background: #00582A;
   box-shadow: inset 0px 4px 11.1px 0px rgb(40, 178, 125);
+  border-radius: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  height: 60px;
+  transition: all 0.1s;
+  font-weight: 500;
 }
 .main-block-1 .main-block-1__right .personal-line .personal-line__form .personal-line__button .button-text {
   margin: 0 auto;
+}
+.main-block-1 .main-block-1__right .personal-line .personal-line__form .personal-line__button:hover {
+  background-color: #F0EEEE;
+  box-shadow: inset -4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  color: #00582A;
 }
 .main-block-1 .main-block-1__mobile {
   display: none;

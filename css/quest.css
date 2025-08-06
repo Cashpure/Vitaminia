@@ -19,7 +19,7 @@
   text-transform: uppercase;
   padding: 20px 0;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 .main-quest-request__left-button .button-arrow {
   width: 60px;
@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 .main-quest-request__left-button .button-arrow img {
   opacity: 1;
@@ -44,15 +44,6 @@
   align-items: center;
   opacity: 1;
   transition: all 0.1s;
-}
-.main-quest-request__left-button:hover .button-decor {
-  opacity: 0;
-}
-.main-quest-request__left-button:hover .button-arrow {
-  transform: translateX(-80px);
-}
-.main-quest-request__left-button:hover .button-arrow img {
-  opacity: 0;
 }
 
 .main-quest-request {

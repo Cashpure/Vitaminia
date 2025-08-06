@@ -151,7 +151,10 @@ input[type="range"] {
       align-items: center;
       justify-content: center;
       margin-left: auto;
-      transform: rotate(-45deg);
+
+      img {
+         transform: rotate(-45deg);
+      }
    }
 
    .button-decor {
@@ -300,7 +303,7 @@ input[type="range"] {
          width: calc(100% - 60px);
          text-transform: uppercase;
          padding: 14px 0;
-   
+         height: 50px;
       }
    
       .button-arrow {

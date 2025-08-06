@@ -22,7 +22,7 @@
          <div class="call-request__title">заказать <br> обрытный звонок</div>
          <form action="/call-request" method="post" class="call-request__form">
             <input placeholder="Имя" type="text" class="call-request__input call-request__input-name input" required>
-            <input placeholder="Телефон" type="tel" class="call-request__input call-request__input-tel input" required>
+            <input placeholder="Телефон" type="tel" class="call-request__input call-request__input-tel input input-phone" required>
             <input placeholder="Сообщение" type="text" class="call-request__input call-request__input-message input"
                required>
             <select name="call-request__input-question" required>
@@ -31,18 +31,27 @@
                <option value="second-question">2-й вопрос</option>
                <option value="third-question">3-й вопрос</option>
             </select>
-            <label class="call-request__time">
+            <label for="call-request__time" class="call-request__time">
                Удобное время звонка сегодня
-               <div class="call-request__time-inner">
-                  <input class="input" type="time" name="callback_time" required>
-               </div>
             </label>
-            <button class="button call-request__button">
-               <div>Перезвоните мне</div>
-               <img src="img/button-arrow-right-white.svg" alt="decor">
+            <input id="call-request__time" class="input" type="time" name="callback_time" required>
+            <button type="submit" class="call-request__button button-anim">
+               <span class="button-text">Перезвоните мне</span>
+               <span class="button-decor">
+                  <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <path 
+                        d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z" fill="#00582A"
+                        fill-opacity="1.000000" fill-rule="nonzero" />
+                  </svg>
+               </span>
+               <span class="button-arrow">
+                  <img src="img/button-arrow-right-white.svg" alt="decor">
+               </span>
             </button>
          </form>
-         <div class="call-request__privacy">Нажимая эту кнопку, Вы даете согласие на <a href="agree.html">обработку персональных
+         <div class="call-request__privacy">Нажимая эту кнопку, Вы даете согласие на <a href="agree.html">обработку
+               персональных
                данных</a></div>
       </div>
    </div>
@@ -96,7 +105,7 @@
                      <a href="confirm.html" class="header-main__link header-main__link-cart">
                         <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                           <path id="Vector"
+                           <path 
                               d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z"
                               fill="#7C7C7C" fill-opacity="1.000000" fill-rule="nonzero" />
                         </svg>
@@ -105,7 +114,7 @@
                      <a href="#" class="header-main__link header-main__link-fav">
                         <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                           <path id="Vector"
+                           <path 
                               d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                               stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000"
                               stroke-linejoin="round" />
@@ -114,17 +123,23 @@
                      <a href="me.html" class="header-main__link header-main__link-acc">
                         <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                           <path id="Vector"
+                           <path 
                               d="M28.73 29.83C29.01 29.55 29.16 29.18 29.16 28.8L29.16 26.98C29.17 22.89 23.37 19.68 17.5 19.68C11.62 19.68 5.83 22.89 5.83 26.98L5.83 28.8C5.83 29.18 5.98 29.55 6.26 29.83C6.53 30.1 6.9 30.26 7.29 30.26L27.7 30.26C28.09 30.26 28.46 30.1 28.73 29.83ZM22.35 12C22.09 12.64 21.7 13.22 21.21 13.71C20.72 14.2 20.14 14.58 19.51 14.85C18.87 15.11 18.19 15.25 17.5 15.25C16.81 15.25 16.12 15.11 15.48 14.85C14.85 14.58 14.27 14.2 13.78 13.71C13.29 13.22 12.9 12.64 12.64 12C12.38 11.36 12.24 10.68 12.24 9.99C12.24 8.6 12.79 7.26 13.78 6.27C14.76 5.29 16.1 4.73 17.5 4.73C18.89 4.73 20.23 5.29 21.21 6.27C22.2 7.26 22.75 8.6 22.75 9.99C22.75 10.68 22.62 11.36 22.35 12Z"
                               stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000"
                               stroke-linejoin="round" />
                         </svg>
                      </a>
+                     <div class="catalog-main catalog-header">
+                        <div class="catalog-text">Свернуть</div>
+                        <div class="catalog-img">
+                           <img src="img/catalog-search.svg" alt="svg">
+                        </div>
+                     </div>
                   </div>
                   <button class="header-main__catalog">
-                     <div class="header-main__catalog-img">
+                     <span class="header-main__catalog-img">
                         <img src="img/catalog-search.svg" alt="svg">
-                     </div>
+                     </span>
                   </button>
                </div>
             </div>
@@ -134,9 +149,14 @@
                <div class="header-bot__inner">
                   <ul class="header-bot__list">
                      <li class="header-bot__item">
-                        <a href="#" class="header-bot__link header-bot__link-catalog">
+                        <a href="#" class="header-bot__link header-bot__link-catalog catalog-header">
                            <div class="catalog-arrow">
-                              <img src="img/arrow-botright-orange.svg" alt="svg">
+                              <svg width="12.316055" height="12.316162" viewBox="0 0 12.3161 12.3162" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <path id="Vector" d="M11.31 11.31L1 1M1 11.31L11.31 11.31L11.31 1" stroke="#00582A"
+                                    stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"
+                                    stroke-linecap="round" />
+                              </svg>
                            </div>
                            <div class="catalog-text">Каталог</div>
                         </a>
@@ -181,6 +201,132 @@
             </div>
          </div>
       </header>
+      <div class="catalog-menu">
+         <div class="catalog-menu__title">КАТАЛОГ</div>
+         <div class="catalog-menu__left">
+            <div class="catalog-menu__block">
+               <div class="catalog-menu__block-title catalog-title__acc"><span>Витамины</span><div class="title-decor">
+                  <img src="img/filter-arrow-down-green.svg" alt="svg">
+               </div></div>
+               <ul class="catalog-menu__block-list">
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Витамины для детей</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Мультивитамины</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Для женщин</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Для мужчин</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Омега-3</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Витамин С</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="search.html" class="catalog-menu__block-link">Цинк</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="catalog-menu__block">
+               <div class="catalog-menu__block-title catalog-title__acc"><span>БАДЫ</span><div class="title-decor">
+                  <img src="img/filter-arrow-down-green.svg" alt="svg">
+               </div></div>
+               <ul class="catalog-menu__block-list">
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Хлорофилл</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Спирулина</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Куркумин</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Хлорофилл</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Спирулина</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Куркумин</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="catalog-menu__block">
+               <div class="catalog-menu__block-title catalog-title__acc"><span>Спортивное питание</span><div class="title-decor">
+                  <img src="img/filter-arrow-down-green.svg" alt="svg">
+               </div></div>
+               <ul class="catalog-menu__block-list">
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Л-карнитин</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Протеины</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Гейнер</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Креатин</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Аминокислоты</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="catalog-menu__block">
+               <div class="catalog-menu__block-title catalog-title__acc"><span>СИМПТОМАТИКА</span><div class="title-decor">
+                  <img src="img/filter-arrow-down-green.svg" alt="svg">
+               </div></div>
+               <ul class="catalog-menu__block-list">
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Для сердца</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Для печени</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Для почек</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Для мозговой деятельности</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Для кожи, волос и ногтей</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">Для дыхательной системы</a>
+                  </li>
+                  <li class="catalog-menu__block-item">
+                     <a href="item-page.html" class="catalog-menu__block-link">От аллергии</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="catalog-menu__block">
+               <a href="brands.html" class="catalog-menu__block-title catalog-menu__block-title-link">Бренды</a>
+               <a href="best.html" class="catalog-menu__block-title catalog-menu__block-title-link">Бестселлеры</a>
+               <a href="new.html" class="catalog-menu__block-title catalog-menu__block-title-link">Новинки</a>
+               <a href="sales.html" class="catalog-menu__block-title catalog-menu__block-title-link">Акционные товары</a>
+            </div>
+         </div>
+         <div class="catalog-menu__right">
+            <a href="sales.html" class="catalog-menu__right-img-wrapper">
+               <img alt="картинка товара" src="img/catalog-menu-1.png" class="catalog-menu__right-img">
+               <div class="catalog-menu__img-text">Скидки на витамины</div>
+               <div class="catalog-menu__img-title">от <span>20%</span></div>
+            </a>
+            <a href="sales.html" class="catalog-menu__right-img-wrapper">
+               <img alt="картинка товара" src="img/catalog-menu-2.png" class="catalog-menu__right-img">
+               <div class="catalog-menu__img-text">Акция на Omega-3</div>
+               <div class="catalog-menu__img-title">до <span>15</span> июля</div>
+            </a>
+         </div>
+      </div>
       <main class="main main-block">
          <div class="container">
             <div class="location">
@@ -191,19 +337,19 @@
             <h2 class="main-title">Поиск “протеин”</h2>
             <div class="main-top">
                <button class="filter">
-                  <div class="filter-decor">
+                  <span class="filter-decor">
                      <img src="img/filter.svg" alt="svg">
-                  </div>
-                  <div class="filter-text">Самые популярные</div>
-                  <div class="filter-arrow">
+                  </span>
+                  <span class="filter-text">Самые популярные</span>
+                  <span class="filter-arrow">
                      <img src="img/filter-arrow-down-green.svg" alt="svg">
-                  </div>
+                  </span>
                </button>
                <button class="category">
-                  <div class="category-text">Категория</div>
-                  <div class="category-arrow">
+                  <span class="category-text">Категория</span>
+                  <span class="category-arrow">
                      <img src="img/filter-arrow-down-green.svg" alt="svg">
-                  </div>
+                  </span>
                </button>
             </div>
             <div class="main-content">
@@ -232,19 +378,19 @@
                            <span>до <span id="priceValue">7899</span></span>
                         </div>
                      </div>
-                     <button class="filters__button">
-                        <div class="button-text">Применить</div>
-                        <div class="button-decor">
+                     <button class="filters__button button-anim">
+                        <span class="button-text">Применить</span>
+                        <span class="button-decor">
                            <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <path id="Rectangle 290"
+                              <path
                                  d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                  fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                            </svg>
-                        </div>
-                        <div class="button-arrow">
+                        </span>
+                        <span class="button-arrow">
                            <img src="img/arrow-right-green.svg" alt="decor">
-                        </div>
+                        </span>
                      </button>
                      <button class="reset-btn">Сбросить все фильтры</button>
                   </div>
@@ -256,7 +402,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -279,28 +425,28 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                            <div class="swiper-slide swiper-slide-best">
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -323,28 +469,28 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                            <div class="swiper-slide swiper-slide-best">
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -367,21 +513,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -411,19 +557,19 @@
                            <div class="right-top__right-var right-top__right-var--active">
                               <div class="var-img">
                                  <svg width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <rect id="Rectangle 51" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
-                                    <rect id="Rectangle 62" y="17.000000" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
-                                    <rect id="Rectangle 61" x="17.000000" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
-                                    <rect id="Rectangle 63" x="17.000000" y="17.000000" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect y="17.000000" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect x="17.000000" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect x="17.000000" y="17.000000" rx="2.000000" width="12.000000" height="12.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
                                  </svg>
                               </div>
                            </div>
                            <div class="right-top__right-var">
                               <div class="var-img">
                                  <svg width="29.000000" height="26.000000" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <rect id="Rectangle 63" rx="2.000000" width="29.000000" height="4.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
-                                    <rect id="Rectangle 64" y="11.000000" rx="2.000000" width="29.000000" height="4.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
-                                    <rect id="Rectangle 65" y="22.000000" rx="2.000000" width="29.000000" height="4.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect rx="2.000000" width="29.000000" height="4.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect y="11.000000" rx="2.000000" width="29.000000" height="4.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
+                                    <rect y="22.000000" rx="2.000000" width="29.000000" height="4.000000" fill="#C9C9C9" fill-opacity="1.000000"/>
                                  </svg>
                               </div>
                            </div>
@@ -437,7 +583,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -460,21 +606,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -483,7 +629,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -506,21 +652,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -529,7 +675,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -552,21 +698,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -575,7 +721,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -598,21 +744,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -621,7 +767,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -644,21 +790,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -667,7 +813,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -690,21 +836,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -713,7 +859,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -736,21 +882,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -759,7 +905,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -782,21 +928,21 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
@@ -805,7 +951,7 @@
                               <div class="slide-best-heart">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 35 35" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path 
                                        d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                                        stroke="#00582A" stroke-opacity="1.000000" stroke-width="1.500000"
                                        stroke-linejoin="round" />
@@ -828,30 +974,30 @@
                                  <div class="current-price">990 руб.</div>
                                  <div class="sale-price">1190 руб.</div>
                               </div>
-                              <button class="slide-best-button">
-                                 <div class="button-text">в корзину</div>
-                                 <div class="button-decor">
+                              <button class="slide-best-button button-anim">
+                                 <span class="button-text">в корзину</span>
+                                 <span class="button-decor">
                                     <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Rectangle 290"
+                                       <path
                                           d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
                                           fill="#F0EEEE" fill-opacity="1.000000" fill-rule="nonzero" />
                                     </svg>
-                                 </div>
-                                 <div class="button-arrow">
+                                 </span>
+                                 <span class="button-arrow">
                                     <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                       <path id="Vector" d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                       <path  d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z" fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero"/>
                                     </svg>
-                                 </div>
+                                 </span>
                               </button>
                            </div>
                         </div>
                      </div>
                      <button class="right-main__more">
-                        <div class="right-main__more-text">открыть больше</div>
-                        <div class="right-main__more-arrow">
+                        <span class="right-main__more-text">открыть больше</span>
+                        <span class="right-main__more-arrow">
                            <img src="img/button-arrow-right-white.svg" alt="svg">
-                        </div>
+                        </span>
                      </button>
                   </div>
                </div>
@@ -895,7 +1041,7 @@
                               <a href="#" class="footer-main__social-link">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path
                                        d="M35.42 5.34L3.85 17.58C2.57 18.15 2.14 19.29 3.54 19.91L11.64 22.5L31.23 10.33C32.3 9.56 33.39 9.77 32.45 10.61L15.63 25.92L15.1 32.4C15.59 33.4 16.48 33.4 17.05 32.9L21.71 28.48L29.68 34.48C31.53 35.58 32.54 34.87 32.94 32.85L38.17 7.96C38.71 5.48 37.78 4.38 35.42 5.34Z"
                                        fill="#24a3d5" fill-opacity="1.000000" fill-rule="nonzero" />
                                  </svg>
@@ -903,7 +1049,7 @@
                               <a href="#" class="footer-main__social-link">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path
                                        d="M20 5C28.28 5 35 11.71 35 20C35 28.28 28.28 35 20 35C17.34 35 14.74 34.3 12.45 32.96L5 35L7.03 27.54C5.69 25.25 4.99 22.65 5 20C5 11.71 11.71 5 20 5ZM14.88 12.95L14.58 12.96C14.39 12.97 14.2 13.02 14.03 13.11C13.86 13.2 13.71 13.31 13.58 13.45C13.4 13.62 13.3 13.77 13.19 13.91C12.64 14.63 12.34 15.51 12.34 16.42C12.35 17.16 12.54 17.88 12.84 18.54C13.45 19.9 14.46 21.33 15.79 22.66C16.11 22.98 16.43 23.3 16.77 23.6C18.42 25.05 20.4 26.1 22.53 26.67L23.38 26.8C23.66 26.81 23.94 26.79 24.21 26.78C24.65 26.75 25.08 26.64 25.46 26.43C25.66 26.33 25.85 26.22 26.04 26.1C26.04 26.1 26.1 26.06 26.23 25.96C26.43 25.82 26.55 25.71 26.72 25.53C26.85 25.4 26.95 25.25 27.04 25.08C27.15 24.84 27.27 24.37 27.32 23.98C27.35 23.68 27.34 23.52 27.34 23.42C27.33 23.26 27.2 23.09 27.05 23.02L26.18 22.63C26.18 22.63 24.88 22.06 24.08 21.7C23.99 21.66 23.9 21.64 23.81 21.64C23.71 21.63 23.61 21.64 23.51 21.67C23.41 21.71 23.32 21.76 23.25 21.83C23.24 21.83 23.14 21.91 22.05 23.23C21.99 23.31 21.91 23.37 21.81 23.41C21.71 23.44 21.6 23.45 21.5 23.42C21.4 23.4 21.31 23.36 21.22 23.32C21.03 23.24 20.97 23.21 20.84 23.16C19.98 22.79 19.18 22.28 18.48 21.66C18.29 21.49 18.11 21.31 17.93 21.14C17.34 20.57 16.83 19.93 16.4 19.23L16.31 19.09C16.25 19 16.2 18.89 16.16 18.78C16.1 18.56 16.25 18.39 16.25 18.39C16.25 18.39 16.62 17.99 16.79 17.77C16.95 17.56 17.09 17.36 17.18 17.21C17.36 16.93 17.41 16.63 17.32 16.41C16.9 15.38 16.46 14.36 16.02 13.35C15.93 13.15 15.67 13 15.43 12.97C15.35 12.96 15.27 12.96 15.18 12.95C14.98 12.94 14.78 12.94 14.58 12.96L14.88 12.95Z"
                                        fill="#22c553" fill-opacity="1.000000" fill-rule="nonzero" />
                                  </svg>
@@ -911,7 +1057,7 @@
                               <a href="#" class="footer-main__social-link">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path
                                        d="M39.27 9.62C39.55 8.68 39.27 8 37.94 8L33.52 8C32.39 8 31.88 8.59 31.59 9.24C31.59 9.24 29.35 14.73 26.16 18.28C25.13 19.32 24.66 19.64 24.1 19.64C23.82 19.64 23.41 19.32 23.41 18.38L23.41 9.62C23.41 8.5 23.09 8 22.15 8L15.2 8C14.5 8 14.08 8.52 14.08 9.01C14.08 10.08 15.67 10.32 15.83 13.32L15.83 19.83C15.83 21.26 15.58 21.52 15.01 21.52C13.51 21.52 9.87 16.01 7.7 9.71C7.28 8.49 6.86 8 5.73 8L1.31 8C0.04 8 -0.21 8.59 -0.21 9.25C-0.21 10.42 1.29 16.23 6.77 23.91C10.42 29.15 15.57 32 20.25 32C23.06 32 23.41 31.36 23.41 30.28L23.41 26.31C23.41 25.05 23.68 24.79 24.57 24.79C25.22 24.79 26.35 25.12 28.97 27.65C31.97 30.65 32.46 31.99 34.15 31.99L38.57 31.99C39.83 31.99 40.46 31.36 40.1 30.12C39.7 28.88 38.27 27.07 36.37 24.94C35.34 23.72 33.79 22.41 33.32 21.75C32.67 20.91 32.86 20.53 33.32 19.78C33.33 19.79 38.71 12.2 39.27 9.62Z"
                                        fill="#0f85c0" fill-opacity="1.000000" fill-rule="nonzero" />
                                  </svg>
@@ -919,7 +1065,7 @@
                               <a href="#" class="footer-main__social-link">
                                  <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <path id="Vector"
+                                    <path
                                        d="M20.4 6.66C21.29 6.67 23.52 6.69 25.88 6.78L26.73 6.82C29.11 6.93 31.49 7.12 32.67 7.45C34.24 7.9 35.48 9.19 35.9 10.82C36.56 13.42 36.65 18.49 36.66 19.72L36.66 19.98L36.66 20.27C36.65 21.49 36.56 26.57 35.9 29.16C35.48 30.81 34.24 32.1 32.67 32.53C31.49 32.86 29.11 33.06 26.73 33.17L25.88 33.21C23.52 33.3 21.29 33.32 20.4 33.33L20.01 33.33L19.58 33.33C17.7 33.32 9.82 33.23 7.32 32.53C5.75 32.09 4.51 30.8 4.09 29.16C3.42 26.56 3.34 21.49 3.33 20.27L3.33 19.72C3.34 18.49 3.42 13.42 4.09 10.82C4.51 9.18 5.75 7.89 7.32 7.45C9.82 6.76 17.7 6.67 19.59 6.66L20.4 6.66ZM16.66 14.16L16.66 25.83L26.66 20L16.66 14.16Z"
                                        fill="#b6341a" fill-opacity="1.000000" fill-rule="nonzero" />
                                  </svg>
@@ -932,9 +1078,19 @@
                         <div class="footer-right__sub">
                            <form action="/sub" method="post">
                               <input placeholder="E-mail" type="email" class="footer-right__sub-input input" required>
-                              <button class="footer-right__sub-button" type="submit">
-                                 <div class="button-text">подписаться</div>
-                                 <img src="img/button-arrow-right-white.svg" alt="svg">
+                              <button class="footer-right__sub-button button-anim" type="submit">
+                                 <span class="button-text">подписаться</span>
+                                 <span class="button-decor">
+                                    <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                       <path
+                                          d="M0 0C15.92 16.63 24.69 17.01 40 0L40 40C24.05 24.72 15.31 25.49 0 40L0 0Z"
+                                          fill="#00582A" fill-opacity="1.000000" fill-rule="nonzero" />
+                                    </svg>
+                                 </span>
+                                 <span class="button-arrow">
+                                    <img src="img/button-arrow-right-white.svg" alt="decor">
+                                 </span>
                               </button>
                            </form>
                         </div>
@@ -1004,7 +1160,8 @@
                                     <a href="agree.html" class="footer-right__list-link">Пользовательское соглашение</a>
                                  </li>
                                  <li class="footer-right__list-item">
-                                    <a href="privacy.html" class="footer-right__list-link">Политика конфиденциальности и оферта</a>
+                                    <a href="privacy.html" class="footer-right__list-link">Политика конфиденциальности и
+                                       оферта</a>
                                  </li>
                               </ul>
                            </div>
@@ -1036,15 +1193,16 @@
             </div>
             <div class="footer-under">
                <button class="footer-under__catalog">
-                  <div class="footer-under__catalog-img">
+                  <span class="footer-under__catalog-img">
                      <img src="img/catalog-search.svg" alt="svg">
-                  </div>
-                  <div class="footer-under__catalog-text">Каталог</div>
+                  </span>
+                  <span class="footer-under__catalog-text footer-under__catalog-text-1">Каталог</span>
+                  <span class="footer-under__catalog-text footer-under__catalog-text-2">Свернуть</span>
                </button>
                <a href="confirm.html" class="footer-under__link footer-under__link-cart">
                   <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                     <path id="Vector"
+                     <path
                         d="M23.33 26.25C24.1 26.25 24.84 26.55 25.39 27.1C25.94 27.65 26.25 28.39 26.25 29.16C26.25 29.94 25.94 30.68 25.39 31.22C24.84 31.77 24.1 32.08 23.33 32.08C22.55 32.08 21.81 31.77 21.27 31.22C20.72 30.68 20.41 29.94 20.41 29.16C20.41 28.39 20.72 27.65 21.27 27.1C21.81 26.55 22.55 26.25 23.33 26.25ZM23.33 27.7C22.94 27.7 22.57 27.86 22.3 28.13C22.02 28.4 21.87 28.77 21.87 29.16C21.87 29.55 22.02 29.92 22.3 30.19C22.57 30.47 22.94 30.62 23.33 30.62C23.72 30.62 24.09 30.47 24.36 30.19C24.63 29.92 24.79 29.55 24.79 29.16C24.79 28.77 24.63 28.4 24.36 28.13C24.09 27.86 23.72 27.7 23.33 27.7ZM10.2 26.25C10.98 26.25 11.72 26.55 12.27 27.1C12.81 27.65 13.12 28.39 13.12 29.16C13.12 29.94 12.81 30.68 12.27 31.22C11.72 31.77 10.98 32.08 10.2 32.08C9.43 32.08 8.69 31.77 8.14 31.22C7.59 30.68 7.29 29.94 7.29 29.16C7.29 28.39 7.59 27.65 8.14 27.1C8.69 26.55 9.43 26.25 10.2 26.25ZM10.2 27.7C9.82 27.7 9.45 27.86 9.17 28.13C8.9 28.4 8.75 28.77 8.75 29.16C8.75 29.55 8.9 29.92 9.17 30.19C9.45 30.47 9.82 30.62 10.2 30.62C10.59 30.62 10.96 30.47 11.23 30.19C11.51 29.92 11.66 29.55 11.66 29.16C11.66 28.77 11.51 28.4 11.23 28.13C10.96 27.86 10.59 27.7 10.2 27.7ZM26.25 8.75L6.22 8.75L9.94 17.5L21.87 17.5C22.35 17.5 22.77 17.26 23.04 16.91L27.41 11.08C27.6 10.83 27.7 10.52 27.7 10.2C27.7 9.82 27.55 9.45 27.28 9.17C27 8.9 26.63 8.75 26.25 8.75ZM21.87 18.95L10.01 18.95L8.89 21.23L8.75 21.87C8.75 22.26 8.9 22.63 9.17 22.9C9.45 23.17 9.82 23.33 10.2 23.33L26.25 23.33L26.25 24.79L10.2 24.79C9.43 24.79 8.69 24.48 8.14 23.93C7.59 23.39 7.29 22.64 7.29 21.87C7.29 21.38 7.41 20.89 7.65 20.46L8.7 18.31L3.41 5.83L1.45 5.83L1.45 4.37L4.37 4.37L5.61 7.29L26.25 7.29C27.02 7.29 27.76 7.59 28.31 8.14C28.85 8.69 29.16 9.43 29.16 10.2C29.16 10.93 28.91 11.55 28.51 12.04L24.26 17.71C23.74 18.46 22.86 18.95 21.87 18.95Z"
                         fill="#7C7C7C" fill-opacity="1.000000" fill-rule="nonzero" />
                   </svg>
@@ -1053,7 +1211,7 @@
                <a href="#" class="footer-under__link footer-under__link-fav">
                   <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                     <path id="Vector"
+                     <path
                         d="M4.37 12.46C4.37 20.59 17.5 29.89 17.5 29.89C17.5 29.89 30.62 20.59 30.62 12.46C30.62 7.42 27.52 5.1 23.69 5.1C20.98 5.1 18.63 6.76 17.5 9.17C16.36 6.76 14.01 5.1 11.3 5.1C7.47 5.1 4.37 8.39 4.37 12.46Z"
                         stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" />
                   </svg>
@@ -1061,7 +1219,7 @@
                <a href="me.html" class="footer-under__link footer-under__link-acc">
                   <svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none"
                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                     <path id="Vector"
+                     <path
                         d="M28.73 29.83C29.01 29.55 29.16 29.18 29.16 28.8L29.16 26.98C29.17 22.89 23.37 19.68 17.5 19.68C11.62 19.68 5.83 22.89 5.83 26.98L5.83 28.8C5.83 29.18 5.98 29.55 6.26 29.83C6.53 30.1 6.9 30.26 7.29 30.26L27.7 30.26C28.09 30.26 28.46 30.1 28.73 29.83ZM22.35 12C22.09 12.64 21.7 13.22 21.21 13.71C20.72 14.2 20.14 14.58 19.51 14.85C18.87 15.11 18.19 15.25 17.5 15.25C16.81 15.25 16.12 15.11 15.48 14.85C14.85 14.58 14.27 14.2 13.78 13.71C13.29 13.22 12.9 12.64 12.64 12C12.38 11.36 12.24 10.68 12.24 9.99C12.24 8.6 12.79 7.26 13.78 6.27C14.76 5.29 16.1 4.73 17.5 4.73C18.89 4.73 20.23 5.29 21.21 6.27C22.2 7.26 22.75 8.6 22.75 9.99C22.75 10.68 22.62 11.36 22.35 12Z"
                         stroke="#7C7C7C" stroke-opacity="1.000000" stroke-width="1.500000" stroke-linejoin="round" />
                   </svg>
@@ -1071,6 +1229,7 @@
       </footer>
    </div>
 
+   <script src="https://unpkg.com/flubber"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="js/script-search.js"></script>
    <script src="js/header.js"></script>

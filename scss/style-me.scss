@@ -172,9 +172,22 @@
             .personal-line__button {
                background: #00582A;
                box-shadow: inset 0px 4px 11.1px 0px rgb(40, 178, 125);
+               border-radius: 30px;
+               color: white;
+               text-transform: uppercase;
+               font-size: 1.6rem;
+               height: 60px;
+               transition: all .1s;
+               font-weight: 500;
 
                .button-text {
                   margin: 0 auto;
+               }
+
+               &:hover {
+                  background-color: #F0EEEE;
+                  box-shadow: inset -4px 4px 20px 0px rgba(0, 0, 0, .1);
+                  color: #00582A;
                }
             }
          }
@@ -243,6 +256,7 @@
    font-weight: 500;
    margin-bottom: 30px;
 }
+
 
 .change {
    text-decoration: underline;
