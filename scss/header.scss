@@ -514,11 +514,13 @@ button {
    justify-content: space-between;
 
    .header-main__logo {
-      width: 228px;
+      width: 193px;
       height: 73px;
 
-      img {
+      img,
+      svg {
          width: 100%;
+         height: 100%;
       }
    }
 
@@ -698,7 +700,7 @@ button {
    max-width: 1580px;
    padding: 20px 15px;
    margin: 0 auto;
-   z-index: 3;
+   z-index: -1;
    border-radius: 0px 0px 15px 15px;
    box-shadow: 0px 4px 42.2px 0px rgba(0, 0, 0, 0.12);
    display: flex;
@@ -706,6 +708,59 @@ button {
    justify-content: space-between;
    transition: all .3s;
    transform: translate(-50%, -500px);
+
+   .catalog-search {
+      display: flex;
+      background-color: transparent;
+      margin-bottom: 20px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      display: none;
+
+      .search-img {
+         border-radius: 50%;
+         background-color: #f9f9f9;
+         height: 50px;
+         width: 50px;
+         min-height: 50px;
+         min-width: 50px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-left: auto;
+      }
+
+      .search-decor {
+         position: absolute;
+         z-index: 0;
+         right: 38px;
+         display: flex;
+         align-items: center;
+         transition: all .1s;
+         height: 50px;
+      }
+
+      .search-text {
+         background-color: #f9f9f9;
+         height: 50px;
+         border-radius: 30px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 80%;
+         width: calc(100% - 65px);
+
+         .search-input {
+            padding-left: 15px;
+            width: 80%;
+            font-size: 1.6rem;
+            background-color: transparent;
+            margin-right: auto;
+         }
+      }
+
+   }
 
    .catalog-menu__title {
       font-size: 4rem;
@@ -821,6 +876,7 @@ button {
 .catalog-menu--active {
    opacity: 1;
    transform: translate(-50%, 126px);
+   z-index: 3;
 }
 
 
@@ -855,8 +911,7 @@ button {
                align-items: center;
                justify-content: center;
 
-               svg {
-               }
+               svg {}
             }
 
             .catalog-arrow--active {
@@ -907,14 +962,17 @@ button {
       position: fixed;
       width: 100%;
    }
+
    .main {
       margin-top: 120px !important;
    }
+
    .catalog-menu__right {
       display: none;
 
       .catalog-menu__right-img-wrapper {}
    }
+
    .catalog-menu {
       overflow: scroll;
       height: 100%;
@@ -926,27 +984,33 @@ button {
       transform: translateY(85px);
       display: block;
       max-width: none;
-   
+
+      .catalog-search {
+         display: flex;
+      }
+
       .catalog-menu__title {
          display: block;
          margin-bottom: 30px;
       }
-   
+
       .catalog-menu__left {
          display: flex;
          flex-direction: column;
-   
+         padding-bottom: 109px;
+
          .catalog-menu__block {
             &:last-child {
                .catalog-menu__block-title {
                   padding: 0 0 12px 0;
                }
             }
+
             .catalog-menu__block-title {
                cursor: pointer;
                padding-bottom: 12px;
                border-bottom: 1px solid #DADADA;
-   
+
                .title-decor {
                   display: flex;
                   transition: all .2s;
@@ -958,13 +1022,13 @@ button {
                   transform: rotate(180deg);
                }
             }
-   
+
             .catalog-menu__block-title--active {
                background-color: transparent;
                box-shadow: none;
                border-radius: 0;
                color: initial;
-   
+
                .title-decor {
                   transform: rotate(180deg);
                }
@@ -976,6 +1040,7 @@ button {
          }
       }
    }
+
    .catalog-menu--active {
       position: fixed;
    }
@@ -1096,8 +1161,9 @@ button {
 
    .header-main__inner {
       .header-main__logo {
+         display: block;
          width: 140px;
-         height: 46px;
+         height: 54px;
 
          img {
             width: 100%;

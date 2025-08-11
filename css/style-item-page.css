@@ -225,6 +225,7 @@
   width: calc(100% - 60px);
   text-transform: uppercase;
   padding: 14px 0;
+  height: 50px;
 }
 .main-item__right-mid .mid-right .mid-right__block .mid-right__block-add .button-arrow {
   position: relative;

@@ -21,14 +21,9 @@
   margin-bottom: 25px;
 }
 
-.button-arrow {
-  transform: rotate(180deg);
-}
-
 .home-button {
   width: 291px;
   position: relative;
-  grid-column: 1/span 2;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -45,6 +40,9 @@
   width: calc(100% - 75px);
   text-transform: uppercase;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .home-button .button-arrow {
   width: 60px;
@@ -55,6 +53,7 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  transform: rotate(180deg);
 }
 .home-button .button-decor {
   position: absolute;
@@ -76,12 +75,16 @@
   box-shadow: inset 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
   background: rgb(255, 255, 255);
   padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .main-brands__item .item-img {
   min-height: 343px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 .main-brands__item .item-img img {
   width: 100%;

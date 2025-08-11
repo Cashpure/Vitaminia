@@ -25,7 +25,7 @@ const swiperBest = new Swiper('.swiper-best', {
    centeredSlides: true,
 
    breakpoints: {
-      
+
    },
    scrollbar: {
       el: '.swiper-scrollbar-best',
@@ -56,8 +56,22 @@ serachFilterVars.forEach((el) => {
          serachFilterVars[i].classList.remove('right-top__right-var--active')
       }
       el.classList.add('right-top__right-var--active')
-      if(el == serachFilterVars[1]) {
+      if (el == serachFilterVars[1]) {
          document.querySelector('.right-main__grid').classList.add('right-main__grid--lines')
       } else document.querySelector('.right-main__grid').classList.remove('right-main__grid--lines')
    }
 })
+const gridVar = () => {
+   const serachFilterVars = document.querySelectorAll('.right-top__right-var')
+   const mainGrid = document.querySelector('.right-main__grid')
+   if (window.innerWidth <= 600) {
+      serachFilterVars.forEach((el) => {
+         el.classList.remove('right-top__right-var--active')
+      })
+      serachFilterVars[0].classList.add('right-top__right-var--active')
+      mainGrid.classList.remove('right-main__grid--lines')
+   }
+}
+window.addEventListener('resize', () => {
+   gridVar();
+});

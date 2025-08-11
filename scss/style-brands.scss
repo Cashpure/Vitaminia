@@ -21,15 +21,9 @@
    margin-bottom: 25px;
 }
 
-.button-arrow {
-   transform: rotate(180deg);
-}
-
 .home-button {
    width: 291px;
    position: relative;
-   grid-column: 1 / span 2;
-   // background: url(../img/button-bugger-green.svg) no-repeat center;
    background-size: cover;
    display: flex;
    align-items: center;
@@ -46,7 +40,9 @@
       width: calc(100% - 75px);
       text-transform: uppercase;
       padding: 20px 0;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
 
    .button-arrow {
@@ -58,7 +54,7 @@
       align-items: center;
       justify-content: center;
       margin-left: auto;
-
+      transform: rotate(180deg);
    }
 
    .button-decor {
@@ -82,23 +78,29 @@
    box-shadow: inset 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
    background: rgb(255, 255, 255);
    padding: 20px 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 
    .item-img {
       min-height: 343px;
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100%;
 
       img {
          width: 100%;
       }
    }
+
    .item-name {
       font-weight: 500;
       font-size: 2rem;
       text-transform: uppercase;
       margin-bottom: 10px;
    }
+
    .item-bottom {
       display: flex;
       align-items: center;
@@ -107,11 +109,13 @@
          display: flex;
          flex-direction: column;
          margin-right: auto;
+
          .item-bottom__inner-amount {
             color: #909090;
             font-size: 1.6rem;
             margin-bottom: 11px;
          }
+
          .item-bottom__inner-link {
             font-size: 1.6rem;
             margin-bottom: 11px;
@@ -151,6 +155,7 @@
       }
    }
 }
+
 .brand-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));

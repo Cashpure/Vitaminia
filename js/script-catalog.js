@@ -29,6 +29,7 @@ function initSwiper8() {
    }
 }
 
+
 window.addEventListener('load', () => {
    initSwiper4();
    initSwiper8();
@@ -37,4 +38,5 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', () => {
    initSwiper4();
    initSwiper8();
+   gridVar();
 });

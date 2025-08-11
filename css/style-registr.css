@@ -126,6 +126,8 @@
   width: calc(100% - 75px);
   text-transform: uppercase;
   padding: 20px 0;
+  position: relative;
+  z-index: 2;
 }
 .registr-form .registr-button .button-arrow {
   width: 60px;
@@ -136,6 +138,11 @@
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  transition: all 0.3s;
+}
+.registr-form .registr-button .button-arrow img {
+  opacity: 1;
+  transition: all 0.1s;
 }
 .registr-form .registr-button .button-decor {
   position: absolute;
@@ -143,20 +150,8 @@
   right: 48px;
   display: flex;
   align-items: center;
-}
-.registr-form .registr-button:hover {
-  background-color: #00582A;
-  border-radius: 30px;
-  overflow: hidden;
-}
-.registr-form .registr-button:hover .button-decor {
-  display: none;
-}
-.registr-form .registr-button:hover .button-arrow {
-  border-radius: 0;
-}
-.registr-form .registr-button:hover .button-text {
-  border-radius: 0;
+  opacity: 1;
+  transition: all 0.1s;
 }
 .registr-form .registr-or {
   font-size: 1.6rem;

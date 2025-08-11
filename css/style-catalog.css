@@ -664,7 +664,6 @@ input[type=range] {
   }
   .main-blocks .main-block {
     margin-bottom: 25px;
-    width: 30.556vw;
     overflow: hidden;
     padding: 2.222vw;
   }
@@ -728,11 +727,33 @@ input[type=range] {
   .swiper-slide-best .slide-best-img {
     min-width: 140px;
   }
+  .swiper-slide-best .slide-best-button {
+    background-color: #F0EEEE;
+  }
   .swiper-slide-best .slide-best-button .button-text {
-    display: none;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.8;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 0;
   }
   .swiper-slide-best .slide-best-button .button-decor {
     display: none;
+  }
+  .swiper-slide-best .slide-best-button .button-arrow {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .swiper-slide-best .slide-best-button .button-arrow svg {
+    width: 100%;
+    height: 100%;
   }
   .swiper-slide-best .slide-best-price {
     display: block;
@@ -741,8 +762,8 @@ input[type=range] {
     display: none;
   }
   .swiper-slide-best .slide-best-heart {
-    right: auto;
-    left: 38%;
+    right: 10%;
+    top: 10%;
   }
   .right-top {
     display: none;

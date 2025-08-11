@@ -750,7 +750,7 @@ input[type="range"] {
       gap: 2.389vw;
       .main-block {
          margin-bottom: 25px;
-         width: 30.556vw;
+         // width: 30.556vw;
          overflow: hidden;
          padding: 2.222vw;
    
@@ -830,12 +830,32 @@ input[type="range"] {
          min-width: 140px;
       }
       .slide-best-button {
+         background-color: #F0EEEE;
          .button-text {
-            display: none;
+            font-size: 1.3rem;
+            text-align: center;
+            line-height: 1.8;
+            position: absolute;
+            left: 40%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-left: 0;
          }
-
          .button-decor {
             display: none;
+         }
+         .button-arrow {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            svg {
+               width: 100%;
+               height: 100%;
+            }
          }
       }
 
@@ -848,8 +868,8 @@ input[type="range"] {
       }
 
       .slide-best-heart {
-         right: auto;
-         left: 38%;
+         right: 10%;
+         top: 10%;
       }
    }
 

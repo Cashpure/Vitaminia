@@ -122,11 +122,19 @@
          margin-right: 15px;
 
          .left-item__price-current,
+         .left-item__price-total,
          .main-comment-item__price-current {
             font-size: 1.8rem;
             font-weight: 600;
             margin-bottom: 10px;
             white-space: nowrap;
+
+            .price-total,
+            .price-current,
+            .result-price-total,
+            .result-price-current {
+               display: inline;
+            }
          }
 
          .left-item__price-sale,
@@ -142,6 +150,10 @@
          font-size: 1.8rem;
          font-weight: 700;
          padding-right: 10px;
+
+         .item-result-amount {
+            display: inline;
+         }
       }
 
       .left-item__amount {
@@ -165,9 +177,16 @@
             margin: 0 10px;
          }
 
+         .left-item__amount-number {
+            margin-right: 2px;
+            margin-left: 2px;
+         }
+
          .left-item__amount-minus,
          .main-comment-item__amount-minus {
             position: relative;
+            width: 25px;
+            height: 25px;
 
             &::before {
                content: "";
@@ -184,6 +203,8 @@
          .left-item__amount-plus,
          .main-comment-item__amount-plus {
             position: relative;
+            width: 25px;
+            height: 25px;
 
             &::before {
                content: "";
@@ -264,6 +285,10 @@
 
             .left-bottom__price-amount {
                font-size: 2rem;
+
+               .price-total-adapt {
+                  display: inline;
+               }
             }
          }
 
@@ -337,7 +362,9 @@
             width: 225px;
             text-transform: uppercase;
             padding: 20px 0;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
          }
 
          .button-arrow {
@@ -679,6 +706,7 @@
          font-weight: 600;
          background-color: white;
       }
+
       .finish-dots {
          left: 0;
          right: 0;
@@ -689,9 +717,15 @@
 
       .finish-price {
          background-color: white;
+
+         .final-price-total,
+         .final-price {
+            display: inline;
+         }
       }
    }
 }
+
 .custom-checkbox {
    display: flex;
    align-items: center;
@@ -731,46 +765,46 @@
 
 .main-comment__button {
    position: relative;
-      grid-column: 1 / span 2;
-      // background: url(../img/button-bugger-green.svg) no-repeat center;
-      background-size: cover;
+   grid-column: 1 / span 2;
+   // background: url(../img/button-bugger-green.svg) no-repeat center;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   height: 60px;
+   background-color: transparent;
+   width: 100%;
+
+   .button-text {
+      border-radius: 30px;
+      background-color: #00582A;
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: white;
+      width: calc(100% - 75px);
+      text-transform: uppercase;
+      padding: 20px 0;
+
+   }
+
+   .button-arrow {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #00582A;
       display: flex;
       align-items: center;
-      height: 60px;
-      background-color: transparent;
-      width: 100%;
-   
-      .button-text {
-         border-radius: 30px;
-         background-color: #00582A;
-         font-weight: 500;
-         font-size: 1.6rem;
-         color: white;
-         width: calc(100% - 75px);
-         text-transform: uppercase;
-         padding: 20px 0;
-         
-      }
-   
-      .button-arrow {
-         width: 60px;
-         height: 60px;
-         border-radius: 50%;
-         background-color: #00582A;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         margin-left: auto;
-         
-      }
-   
-      .button-decor {
-         position: absolute;
-         z-index: 0;
-         right: 48px;
-         display: flex;
-         align-items: center;
-      }
+      justify-content: center;
+      margin-left: auto;
+
+   }
+
+   .button-decor {
+      position: absolute;
+      z-index: 0;
+      right: 48px;
+      display: flex;
+      align-items: center;
+   }
 }
 
 
@@ -814,16 +848,20 @@
    .left-bottom {
       margin-bottom: 30px;
    }
+
    .main-content__left {
       .left-bottom {
          flex-direction: column-reverse;
       }
    }
+
    .left-bottom__confirm-btn {
       margin-bottom: 30px !important;
    }
+
    .main-title {
       position: relative;
+
       span {
          font-size: 2.5rem;
          position: absolute;
@@ -831,6 +869,7 @@
          bottom: 0;
       }
    }
+
    .left-items__top {
       display: none !important;
    }
@@ -854,6 +893,7 @@
          flex-wrap: wrap;
 
          .left-item__price-current,
+         .left-item__price-total,
          .main-comment-item__price-current {
             margin-right: 10px;
             margin-bottom: 0 !important;
@@ -881,6 +921,7 @@
       div {
          display: none;
       }
+
       img {
          width: 130px;
          display: block !important;

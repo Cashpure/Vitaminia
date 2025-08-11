@@ -136,7 +136,8 @@
          width: calc(100% - 75px);
          text-transform: uppercase;
          padding: 20px 0;
-
+         position: relative;
+         z-index: 2;
       }
 
       .button-arrow {
@@ -148,7 +149,13 @@
          align-items: center;
          justify-content: center;
          margin-left: auto;
+         transition: all .3s;
 
+
+         img {
+            opacity: 1;
+            transition: all .1s;
+         }
       }
 
       .button-decor {
@@ -157,24 +164,8 @@
          right: 48px;
          display: flex;
          align-items: center;
-      }
-
-      &:hover {
-         background-color: #00582A;
-         border-radius: 30px;
-         overflow: hidden;
-
-         .button-decor {
-            display: none;
-         }
-
-         .button-arrow {
-            border-radius: 0;
-         }
-
-         .button-text {
-            border-radius: 0;
-         }
+         opacity: 1;
+         transition: all .1s;
       }
 
       margin-bottom: 16px;
@@ -262,7 +253,7 @@
 .congrats {
    position: absolute;
    left: 50%;
-   transform: translateX(-50%); 
+   transform: translateX(-50%);
    display: none;
    max-width: 450px;
    text-align: center;

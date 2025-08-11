@@ -142,25 +142,131 @@
   margin-right: 15px;
 }
 .left-items .left-item .left-item__price .left-item__price-current,
+.left-items .left-item .left-item__price .left-item__price-total,
 .left-items .left-item .left-item__price .main-comment-item__price-current,
 .left-items .left-item .main-comment-item__price .left-item__price-current,
+.left-items .left-item .main-comment-item__price .left-item__price-total,
 .left-items .left-item .main-comment-item__price .main-comment-item__price-current,
 .left-items .main-comment-item .left-item__price .left-item__price-current,
+.left-items .main-comment-item .left-item__price .left-item__price-total,
 .left-items .main-comment-item .left-item__price .main-comment-item__price-current,
 .left-items .main-comment-item .main-comment-item__price .left-item__price-current,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-total,
 .left-items .main-comment-item .main-comment-item__price .main-comment-item__price-current,
 .main-comment-items .left-item .left-item__price .left-item__price-current,
+.main-comment-items .left-item .left-item__price .left-item__price-total,
 .main-comment-items .left-item .left-item__price .main-comment-item__price-current,
 .main-comment-items .left-item .main-comment-item__price .left-item__price-current,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-total,
 .main-comment-items .left-item .main-comment-item__price .main-comment-item__price-current,
 .main-comment-items .main-comment-item .left-item__price .left-item__price-current,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-total,
 .main-comment-items .main-comment-item .left-item__price .main-comment-item__price-current,
 .main-comment-items .main-comment-item .main-comment-item__price .left-item__price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-total,
 .main-comment-items .main-comment-item .main-comment-item__price .main-comment-item__price-current {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 10px;
   white-space: nowrap;
+}
+.left-items .left-item .left-item__price .left-item__price-current .price-total,
+.left-items .left-item .left-item__price .left-item__price-current .price-current,
+.left-items .left-item .left-item__price .left-item__price-current .result-price-total,
+.left-items .left-item .left-item__price .left-item__price-current .result-price-current,
+.left-items .left-item .left-item__price .left-item__price-total .price-total,
+.left-items .left-item .left-item__price .left-item__price-total .price-current,
+.left-items .left-item .left-item__price .left-item__price-total .result-price-total,
+.left-items .left-item .left-item__price .left-item__price-total .result-price-current,
+.left-items .left-item .left-item__price .main-comment-item__price-current .price-total,
+.left-items .left-item .left-item__price .main-comment-item__price-current .price-current,
+.left-items .left-item .left-item__price .main-comment-item__price-current .result-price-total,
+.left-items .left-item .left-item__price .main-comment-item__price-current .result-price-current,
+.left-items .left-item .main-comment-item__price .left-item__price-current .price-total,
+.left-items .left-item .main-comment-item__price .left-item__price-current .price-current,
+.left-items .left-item .main-comment-item__price .left-item__price-current .result-price-total,
+.left-items .left-item .main-comment-item__price .left-item__price-current .result-price-current,
+.left-items .left-item .main-comment-item__price .left-item__price-total .price-total,
+.left-items .left-item .main-comment-item__price .left-item__price-total .price-current,
+.left-items .left-item .main-comment-item__price .left-item__price-total .result-price-total,
+.left-items .left-item .main-comment-item__price .left-item__price-total .result-price-current,
+.left-items .left-item .main-comment-item__price .main-comment-item__price-current .price-total,
+.left-items .left-item .main-comment-item__price .main-comment-item__price-current .price-current,
+.left-items .left-item .main-comment-item__price .main-comment-item__price-current .result-price-total,
+.left-items .left-item .main-comment-item__price .main-comment-item__price-current .result-price-current,
+.left-items .main-comment-item .left-item__price .left-item__price-current .price-total,
+.left-items .main-comment-item .left-item__price .left-item__price-current .price-current,
+.left-items .main-comment-item .left-item__price .left-item__price-current .result-price-total,
+.left-items .main-comment-item .left-item__price .left-item__price-current .result-price-current,
+.left-items .main-comment-item .left-item__price .left-item__price-total .price-total,
+.left-items .main-comment-item .left-item__price .left-item__price-total .price-current,
+.left-items .main-comment-item .left-item__price .left-item__price-total .result-price-total,
+.left-items .main-comment-item .left-item__price .left-item__price-total .result-price-current,
+.left-items .main-comment-item .left-item__price .main-comment-item__price-current .price-total,
+.left-items .main-comment-item .left-item__price .main-comment-item__price-current .price-current,
+.left-items .main-comment-item .left-item__price .main-comment-item__price-current .result-price-total,
+.left-items .main-comment-item .left-item__price .main-comment-item__price-current .result-price-current,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-current .price-total,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-current .price-current,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-current .result-price-total,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-current .result-price-current,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-total .price-total,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-total .price-current,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-total .result-price-total,
+.left-items .main-comment-item .main-comment-item__price .left-item__price-total .result-price-current,
+.left-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .price-total,
+.left-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .price-current,
+.left-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .result-price-total,
+.left-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .result-price-current,
+.main-comment-items .left-item .left-item__price .left-item__price-current .price-total,
+.main-comment-items .left-item .left-item__price .left-item__price-current .price-current,
+.main-comment-items .left-item .left-item__price .left-item__price-current .result-price-total,
+.main-comment-items .left-item .left-item__price .left-item__price-current .result-price-current,
+.main-comment-items .left-item .left-item__price .left-item__price-total .price-total,
+.main-comment-items .left-item .left-item__price .left-item__price-total .price-current,
+.main-comment-items .left-item .left-item__price .left-item__price-total .result-price-total,
+.main-comment-items .left-item .left-item__price .left-item__price-total .result-price-current,
+.main-comment-items .left-item .left-item__price .main-comment-item__price-current .price-total,
+.main-comment-items .left-item .left-item__price .main-comment-item__price-current .price-current,
+.main-comment-items .left-item .left-item__price .main-comment-item__price-current .result-price-total,
+.main-comment-items .left-item .left-item__price .main-comment-item__price-current .result-price-current,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-current .price-total,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-current .price-current,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-current .result-price-total,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-current .result-price-current,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-total .price-total,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-total .price-current,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-total .result-price-total,
+.main-comment-items .left-item .main-comment-item__price .left-item__price-total .result-price-current,
+.main-comment-items .left-item .main-comment-item__price .main-comment-item__price-current .price-total,
+.main-comment-items .left-item .main-comment-item__price .main-comment-item__price-current .price-current,
+.main-comment-items .left-item .main-comment-item__price .main-comment-item__price-current .result-price-total,
+.main-comment-items .left-item .main-comment-item__price .main-comment-item__price-current .result-price-current,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-current .price-total,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-current .price-current,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-current .result-price-total,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-current .result-price-current,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-total .price-total,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-total .price-current,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-total .result-price-total,
+.main-comment-items .main-comment-item .left-item__price .left-item__price-total .result-price-current,
+.main-comment-items .main-comment-item .left-item__price .main-comment-item__price-current .price-total,
+.main-comment-items .main-comment-item .left-item__price .main-comment-item__price-current .price-current,
+.main-comment-items .main-comment-item .left-item__price .main-comment-item__price-current .result-price-total,
+.main-comment-items .main-comment-item .left-item__price .main-comment-item__price-current .result-price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-current .price-total,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-current .price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-current .result-price-total,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-current .result-price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-total .price-total,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-total .price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-total .result-price-total,
+.main-comment-items .main-comment-item .main-comment-item__price .left-item__price-total .result-price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .price-total,
+.main-comment-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .price-current,
+.main-comment-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .result-price-total,
+.main-comment-items .main-comment-item .main-comment-item__price .main-comment-item__price-current .result-price-current {
+  display: inline;
 }
 .left-items .left-item .left-item__price .left-item__price-sale,
 .left-items .left-item .left-item__price .main-comment-item__price-sale,
@@ -191,6 +297,12 @@
   font-weight: 700;
   padding-right: 10px;
 }
+.left-items .left-item .main-comment-item__amount .item-result-amount,
+.left-items .main-comment-item .main-comment-item__amount .item-result-amount,
+.main-comment-items .left-item .main-comment-item__amount .item-result-amount,
+.main-comment-items .main-comment-item .main-comment-item__amount .item-result-amount {
+  display: inline;
+}
 .left-items .left-item .left-item__amount,
 .left-items .main-comment-item .left-item__amount,
 .main-comment-items .left-item .left-item__amount,
@@ -219,6 +331,13 @@
   font-weight: 600;
   margin: 0 10px;
 }
+.left-items .left-item .left-item__amount .left-item__amount-number,
+.left-items .main-comment-item .left-item__amount .left-item__amount-number,
+.main-comment-items .left-item .left-item__amount .left-item__amount-number,
+.main-comment-items .main-comment-item .left-item__amount .left-item__amount-number {
+  margin-right: 2px;
+  margin-left: 2px;
+}
 .left-items .left-item .left-item__amount .left-item__amount-minus,
 .left-items .left-item .left-item__amount .main-comment-item__amount-minus,
 .left-items .main-comment-item .left-item__amount .left-item__amount-minus,
@@ -228,6 +347,8 @@
 .main-comment-items .main-comment-item .left-item__amount .left-item__amount-minus,
 .main-comment-items .main-comment-item .left-item__amount .main-comment-item__amount-minus {
   position: relative;
+  width: 25px;
+  height: 25px;
 }
 .left-items .left-item .left-item__amount .left-item__amount-minus::before,
 .left-items .left-item .left-item__amount .main-comment-item__amount-minus::before,
@@ -255,6 +376,8 @@
 .main-comment-items .main-comment-item .left-item__amount .left-item__amount-plus,
 .main-comment-items .main-comment-item .left-item__amount .main-comment-item__amount-plus {
   position: relative;
+  width: 25px;
+  height: 25px;
 }
 .left-items .left-item .left-item__amount .left-item__amount-plus::before,
 .left-items .left-item .left-item__amount .main-comment-item__amount-plus::before,
@@ -387,6 +510,9 @@
 .main-content__left .left-bottom .left-bottom__inner .left-bottom__price .left-bottom__price-amount {
   font-size: 2rem;
 }
+.main-content__left .left-bottom .left-bottom__inner .left-bottom__price .left-bottom__price-amount .price-total-adapt {
+  display: inline;
+}
 .main-content__left .left-bottom .left-bottom__inner .left-bottom__confirm-btn {
   width: 100%;
   display: flex;
@@ -445,6 +571,9 @@
   width: 225px;
   text-transform: uppercase;
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main-content__left .left-bottom .left-bottom__back-btn .button-arrow {
   width: 60px;
@@ -732,6 +861,10 @@
 .main-comment__finish .main-comment__price .finish-price {
   background-color: white;
 }
+.main-comment__finish .main-comment__price .finish-price .final-price-total,
+.main-comment__finish .main-comment__price .finish-price .final-price {
+  display: inline;
+}
 
 .custom-checkbox {
   display: flex;
@@ -867,12 +1000,16 @@
     flex-wrap: wrap;
   }
   .left-item .left-item__price .left-item__price-current,
+  .left-item .left-item__price .left-item__price-total,
   .left-item .left-item__price .main-comment-item__price-current,
   .left-item .main-comment-item__price .left-item__price-current,
+  .left-item .main-comment-item__price .left-item__price-total,
   .left-item .main-comment-item__price .main-comment-item__price-current,
   .main-comment-item .left-item__price .left-item__price-current,
+  .main-comment-item .left-item__price .left-item__price-total,
   .main-comment-item .left-item__price .main-comment-item__price-current,
   .main-comment-item .main-comment-item__price .left-item__price-current,
+  .main-comment-item .main-comment-item__price .left-item__price-total,
   .main-comment-item .main-comment-item__price .main-comment-item__price-current {
     margin-right: 10px;
     margin-bottom: 0 !important;
