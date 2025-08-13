@@ -177,6 +177,21 @@ button span {
   transform: scale(1.5);
 }
 
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: calc(0.521vw + 10px);
+}
+.location .location-slesh {
+  margin: 0 5px;
+}
+.location .location-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .input {
   border-radius: 30px;
   padding: 20px;
