@@ -244,6 +244,15 @@
   display: inline-block;
 }
 
+@media (max-width: 1230px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 110px;
+  }
+  .main {
+    margin-top: 50px !important;
+  }
+}
 @media (max-width: 900px) {
   .registr-top {
     background-color: transparent;

@@ -132,4 +132,14 @@
 .brand-column a:hover {
   color: #00582A;
   /* можно заменить на твой цвет */
+}
+
+@media (max-width: 1230px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 110px;
+  }
+  .main {
+    margin-top: 50px !important;
+  }
 }/*# sourceMappingURL=style-map.css.map */

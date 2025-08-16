@@ -241,9 +241,22 @@
 
          .footer-bot__logo {
             margin-right: 20px;
+            width: 70px;
+
+            img {
+               width: 100%;
+            }
 
             &:last-child {
                margin-right: 0;
+            }
+
+            &:nth-child(3) {
+               width: 108px;
+
+               img {
+                  width: 100%;
+               }
             }
          }
       }
@@ -488,6 +501,13 @@
 
    .footer-under {
       display: flex;
+
+      .footer-under__link {
+
+         .cart-number {
+            top: -6px;
+         }
+      }
    }
 
    .footer-bot {

@@ -250,6 +250,15 @@
   color: white;
 }
 
+@media (max-width: 1230px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 110px;
+  }
+  .main {
+    margin-top: 50px !important;
+  }
+}
 @media (max-width: 600px) {
   .main-content__top {
     display: block;

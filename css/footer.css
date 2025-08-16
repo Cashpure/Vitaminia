@@ -194,9 +194,19 @@
 }
 .footer-bot .footer-bot__inner .footer-bot__logos .footer-bot__logo {
   margin-right: 20px;
+  width: 70px;
+}
+.footer-bot .footer-bot__inner .footer-bot__logos .footer-bot__logo img {
+  width: 100%;
 }
 .footer-bot .footer-bot__inner .footer-bot__logos .footer-bot__logo:last-child {
   margin-right: 0;
+}
+.footer-bot .footer-bot__inner .footer-bot__logos .footer-bot__logo:nth-child(3) {
+  width: 108px;
+}
+.footer-bot .footer-bot__inner .footer-bot__logos .footer-bot__logo:nth-child(3) img {
+  width: 100%;
 }
 
 .footer-under {
@@ -379,6 +389,9 @@
   }
   .footer-under {
     display: flex;
+  }
+  .footer-under .footer-under__link .cart-number {
+    top: -6px;
   }
   .footer-bot .footer-bot__inner {
     position: relative;

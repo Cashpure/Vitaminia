@@ -127,6 +127,15 @@
   height: 450px;
 }
 
+@media (max-width: 1230px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 110px;
+  }
+  .main {
+    margin-top: 50px !important;
+  }
+}
 @media (max-width: 900px) {
   .main-call-request__inner {
     padding-right: calc(2.111vw + 18px);

@@ -284,18 +284,20 @@
 
    .main-block-2__orange-title {
       margin-bottom: 25px;
-      font-size: calc(1.302vw + 2.5rem);//50
+      font-size: calc(1.302vw + 2.5rem); //50
    }
 
    .main-block-2__orange-text {
       margin: 0 auto;
-      font-size: calc(0.521vw + 1rem);//20
+      font-size: calc(0.521vw + 1rem); //20
       max-width: 1014px;
    }
 }
+
 .main-block-3 {
-   margin-bottom: calc(2.604vw + 50px);//100
+   margin-bottom: calc(2.604vw + 50px); //100
 }
+
 .main-block-3__inner {
    border: solid white 3px;
    border-radius: 15px;
@@ -364,6 +366,17 @@
 
          }
       }
+   }
+}
+
+@media (max-width: 1230px) {
+   .catalog-search {
+      display: flex;
+      margin-top: 110px;
+   }
+
+   .main {
+      margin-top: 50px !important;
    }
 }
 
@@ -470,6 +483,11 @@
 }
 
 @media(max-width: 768px) {
+   .catalog-search {
+      display: flex;
+      margin-top: 90px;
+   }
+
    .main-block-3__inner {
       display: block;
 

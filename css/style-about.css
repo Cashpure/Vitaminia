@@ -321,6 +321,15 @@
   text-align: right;
 }
 
+@media (max-width: 1230px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 110px;
+  }
+  .main {
+    margin-top: 50px !important;
+  }
+}
 @media (max-width: 900px) {
   .main-block-1 .main-block-1__right .main-block-1__right-img {
     position: absolute;
@@ -403,6 +412,10 @@
   }
 }
 @media (max-width: 768px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 90px;
+  }
   .main-block-3__inner {
     display: block;
   }

@@ -225,8 +225,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const squareD = "M0 0H40V40H0V0Z";
 
       let animationFrame;
-      let currentProgress = 0;
       const duration = 200;
+      let toggled = false;
 
       function animate(from, to, reverse = false) {
          const interpolator = flubber.interpolate(from, to);
@@ -247,12 +247,19 @@ document.addEventListener("DOMContentLoaded", () => {
          animationFrame = requestAnimationFrame(frame);
       }
 
-      button.addEventListener("mouseenter", () => {
-         animate(originalD, squareD);
+      button.addEventListener("mouseenter", () => animate(originalD, squareD));
+      button.addEventListener("mouseleave", () => animate(originalD, squareD, true));
+
+      button.addEventListener("click", () => {
+         toggled = !toggled;
+         if (toggled) {
+            animate(originalD, squareD);
+         } else {
+            animate(originalD, squareD, true);
+         }
       });
 
-      button.addEventListener("mouseleave", () => {
-         animate(originalD, squareD, true);
-      });
+      // button.addEventListener("touchstart", () => animate(originalD, squareD));
+      // button.addEventListener("touchend", () => animate(originalD, squareD, true));
    });
 });

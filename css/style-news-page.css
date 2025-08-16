@@ -168,6 +168,15 @@
   align-items: center;
 }
 
+@media (max-width: 1230px) {
+  .catalog-search {
+    display: flex;
+    margin-top: 110px;
+  }
+  .main {
+    margin-top: 50px !important;
+  }
+}
 @media (max-width: 900px) {
   .main-content__top {
     flex-direction: column;
