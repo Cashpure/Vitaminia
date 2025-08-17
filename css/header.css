@@ -87,15 +87,6 @@ button span {
   transition: transform 0.2s ease;
   transform-origin: center;
 }
-.button-anim:hover .button-text {
-  border-radius: 0 !important;
-}
-.button-anim:hover .button-arrow {
-  border-radius: 0 !important;
-}
-.button-anim:hover .button-decor svg {
-  transform: scale(1.5);
-}
 
 .button-wathc-all {
   color: #00582A;
@@ -936,20 +927,37 @@ button span {
   .cart-button:hover .button-decor svg {
     transform: scale(1.5);
   }
+  .button-anim:hover .button-text {
+    border-radius: 0 !important;
+  }
+  .button-anim:hover .button-arrow {
+    border-radius: 0 !important;
+  }
+  .button-anim:hover .button-decor svg {
+    transform: scale(1.5);
+  }
 }
 @media (max-width: 900px) {
   .catalog-menu .catalog-menu__left {
     margin-right: 0;
   }
-  .cart-button {
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 30px;
-    overflow: hidden;
+  .button-anim:hover .button-text {
+    border-radius: 30px !important;
+  }
+  .button-anim:hover .button-arrow {
+    border-radius: 50% !important;
+  }
+  .button-anim:hover .button-decor svg {
+    transform: none;
+  }
+  .button-anim:active .button-text {
+    border-radius: 0 !important;
+  }
+  .button-anim:active .button-arrow {
+    border-radius: 0 !important;
+  }
+  .button-anim:active .button-decor svg {
+    transform: scale(1.5);
   }
   .cart-button:hover .button-text {
     border-radius: 30px;

@@ -93,22 +93,6 @@ button {
          transform-origin: center;
       }
    }
-
-   &:hover {
-      .button-text {
-         border-radius: 0 !important;
-      }
-
-      .button-arrow {
-         border-radius: 0 !important;
-      }
-
-      .button-decor {
-         svg {
-            transform: scale(1.5);
-         }
-      }
-   }
 }
 
 .button-wathc-all {
@@ -1123,6 +1107,24 @@ button {
          }
       }
    }
+
+   .button-anim {
+      &:hover {
+         .button-text {
+            border-radius: 0 !important;
+         }
+   
+         .button-arrow {
+            border-radius: 0 !important;
+         }
+   
+         .button-decor {
+            svg {
+               transform: scale(1.5);
+            }
+         }
+      }
+   }
 }
 
 @media(max-width: 900px) {
@@ -1132,15 +1134,42 @@ button {
       }
    }
 
+   .button-anim {
+   
+      &:hover {
+         .button-text {
+            border-radius: 30px !important;
+         }
+   
+         .button-arrow {
+            border-radius: 50% !important;
+         }
+   
+         .button-decor {
+            svg {
+               transform: none;
+            }
+         }
+      }
+
+      &:active {
+         .button-text {
+            border-radius: 0 !important;
+         }
+
+         .button-arrow {
+            border-radius: 0 !important;
+         }
+
+         .button-decor {
+            svg {
+               transform: scale(1.5);
+            }
+         }
+      }
+   }
+
    .cart-button {
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: 60px;
-      background-color: transparent;
-      border-radius: 30px;
-      overflow: hidden;
 
       &:hover {
          .button-text {
