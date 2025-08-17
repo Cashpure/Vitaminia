@@ -34,17 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("mouseenter", () => animate(originalD, squareD));
       button.addEventListener("mouseleave", () => animate(originalD, squareD, true));
 
-      // button.addEventListener("click", () => {
-      //    toggled = !toggled;
-      //    if (toggled) {
-      //       animate(originalD, squareD);
-      //    } else {
-      //       animate(originalD, squareD, true);
-      //    }
-      // });
+      button.addEventListener("click", () => {
+         toggled = !toggled;
+         if (toggled) {
+            animate(originalD, squareD);
+         } else {
+            animate(originalD, squareD, true);
+         }
+      });
 
-      button.addEventListener("touchstart", () => animate(originalD, squareD));
-      button.addEventListener("touchend", () => animate(originalD, squareD, true));
+      // button.addEventListener("touchstart", () => animate(originalD, squareD));
+      // button.addEventListener("touchend", () => animate(originalD, squareD, true));
    });
 });
 const swiper = new Swiper('.swiper-1', {
