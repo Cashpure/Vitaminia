@@ -189,22 +189,6 @@ button {
          transform-origin: center;
       }
    }
-
-   &:hover {
-      .button-text {
-         border-radius: 0;
-      }
-
-      .button-arrow {
-         border-radius: 0;
-      }
-
-      .button-decor {
-         svg {
-            transform: scale(1.5);
-         }
-      }
-   }
 }
 
 .location {
@@ -212,7 +196,7 @@ button {
    align-items: center;
    font-size: 1.6rem;
    margin-bottom: calc(0.521vw + 10px); //20
-   
+
    .location-slesh {
       margin: 0 5px;
    }
@@ -759,6 +743,7 @@ button {
       }
    }
 }
+
 .catalog-menu {
    opacity: 0;
    background-color: white;
@@ -1119,10 +1104,74 @@ button {
    }
 }
 
+@media(min-width: 900px) {
+   .cart-button {
+   
+      &:hover {
+         .button-text {
+            border-radius: 0;
+         }
+   
+         .button-arrow {
+            border-radius: 0;
+         }
+   
+         .button-decor {
+            svg {
+               transform: scale(1.5);
+            }
+         }
+      }
+   }
+}
+
 @media(max-width: 900px) {
    .catalog-menu {
       .catalog-menu__left {
          margin-right: 0;
+      }
+   }
+
+   .cart-button {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      background-color: transparent;
+      border-radius: 30px;
+      overflow: hidden;
+
+      &:hover {
+         .button-text {
+            border-radius: 30px;
+         }
+
+         .button-arrow {
+            border-radius: 50%;
+         }
+
+         .button-decor {
+            svg {
+               transform: none;
+            }
+         }
+      }
+
+      &:active {
+         .button-text {
+            border-radius: 0;
+         }
+
+         .button-arrow {
+            border-radius: 0;
+         }
+
+         .button-decor {
+            svg {
+               transform: scale(1.5);
+            }
+         }
       }
    }
 }

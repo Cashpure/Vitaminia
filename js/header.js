@@ -247,19 +247,27 @@ document.addEventListener("DOMContentLoaded", () => {
          animationFrame = requestAnimationFrame(frame);
       }
 
-      button.addEventListener("mouseenter", () => animate(originalD, squareD));
-      button.addEventListener("mouseleave", () => animate(originalD, squareD, true));
-
-      button.addEventListener("click", () => {
-         toggled = !toggled;
-         if (toggled) {
-            animate(originalD, squareD);
-         } else {
-            animate(originalD, squareD, true);
+      button.addEventListener("mouseenter", () => {
+         if (window.innerWidth >= 900) {
+            animate(originalD, squareD)
+         }
+      }); 
+      button.addEventListener("mouseleave", () => {
+         if (window.innerWidth >= 900) {
+            animate(originalD, squareD, true)
          }
       });
 
-      // button.addEventListener("touchstart", () => animate(originalD, squareD));
-      // button.addEventListener("touchend", () => animate(originalD, squareD, true));
+      // button.addEventListener("click", () => {
+      //    toggled = !toggled;
+      //    if (toggled) {
+      //       animate(originalD, squareD);
+      //    } else {
+      //       animate(originalD, squareD, true);
+      //    }
+      // });
+
+      button.addEventListener("touchstart", () => animate(originalD, squareD));
+      button.addEventListener("touchend", () => animate(originalD, squareD, true));
    });
 });
