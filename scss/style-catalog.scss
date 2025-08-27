@@ -764,9 +764,18 @@ input[type="range"] {
          // width: 30.556vw;
          overflow: hidden;
          padding: 2.222vw;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: calc(8.333vw + 75px);//150
+
+         .block-img {
+            display: none;
+         }
    
          .block-title {
-            font-size: 1.4rem;
+            font-size: calc(2.222vw + 5px);//25
+            text-align: center;
          }
 
          .block-img {
